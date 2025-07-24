@@ -34,7 +34,7 @@
 			{#if showAllGames || (idx < 60)}
 				{#if game.name.toLowerCase().replace(/\s/gim, '').includes(search)}
 					<button class="game" onclick={() => openGame(game.url)} data-id={game.id}>
-						<img alt="GameIcon" src={game.image} />
+						<img alt="GameIcon" src={game.image} draggable="false" loading="lazy" />
 						<p>{game.name}</p>
 					</button>
 				{/if}
