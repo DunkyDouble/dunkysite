@@ -1,5 +1,5 @@
 <script>
-	let url = '';
+	let url = $state('');
 	const visit = () => {
 		window.location.replace(url);
 	};
@@ -8,7 +8,7 @@
 <h1>Developer Page</h1>
 <p>Website URL:</p>
 <input type="text" class="goob" bind:value={url} placeholder="URL">
-<button on:click={visit}>Go</button>
+<button onclick={visit}>Go</button>
 
 <style>
 	.goob {

@@ -2,7 +2,7 @@
 	import games from '$lib/games.js';
 	import appsList from '$lib/apps.js';
 
-    let testStarted = false;
+    let testStarted = $state(false);
     let currentIndex = 0;
     let currentEndIndex = 9;
 
@@ -11,7 +11,7 @@
         return urlObj.origin;
     };
 
-    let currentTestSet = [];
+    let currentTestSet = $state([]);
     const getTotalSet = () => {
         const gamesList = games.map(game => {
             return getOriginUrl(game.url);
@@ -43,9 +43,9 @@
 <h1>Unit Test</h1>
 <p>This will open all game URL origins on the site in packs of 9.</p>
 {#if !testStarted}
-    <button on:click={startTest}>Start Test</button>
+    <button onclick={startTest}>Start Test</button>
 {:else}
-    <button on:click={incrementTest}>Next</button>
+    <button onclick={incrementTest}>Next</button>
     
     <div class="container">
         {#each currentTestSet as gameUrl}

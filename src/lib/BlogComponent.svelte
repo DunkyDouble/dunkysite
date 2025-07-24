@@ -8,8 +8,8 @@
         	breaks: true,
     	});
     
-	export let post = '';
-	let postHtml = '';
+	let { post } = $props();
+	let postHtml = $state('');
 
 	const defaultLinkOpenRender = md.renderer.rules.link_open || function (tokens, idx, options, env, self) {
         	return self.renderToken(tokens, idx, options);

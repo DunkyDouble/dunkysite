@@ -7,9 +7,9 @@ const config = {
             runtime: 'nodejs20.x'
         })
     },
-    // compilerOptions: {
-    //     runes: true
-    // }
+    compilerOptions: {
+        runes: true
+    },
 };
 
 export default config;

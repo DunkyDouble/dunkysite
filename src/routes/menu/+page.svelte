@@ -9,17 +9,17 @@
 	import GamesComponent from '$lib/GamesComponent.svelte';
 	import BlogComponent from '$lib/BlogComponent.svelte';
 
-	const options = {
+	const options = $state({
 		search: '',
 		secret: '',
 		newTab: true,
 		activeTab: 'home'
-	};
-	const state = {
+	});
+	const state = $state({
 		confirmed: false,
 		locked: false,
 		name: ''
-	};
+	});
 	const setActiveTab = (type) => {
 		options.activeTab = type;
 	};
@@ -60,11 +60,11 @@
 		<h1>Confirm</h1>
 		<p>You are currently logging in as <em>{state.name}</em>.</p>
 		<p class="subtext">If this is not you, please contact the person who gave you this app.</p>
-		<button class="login" on:click={() => { state.confirmed = true; }}>Enter</button>
+		<button class="login" onclick={() => { state.confirmed = true; }}>Enter</button>
 	</div>
 {:else}
 	<div class="main center">
-		<div style="height:32px;width:100%" />
+		<div style="height:32px;width:100%"></div>
 		<h1 class="big-title">
 			{#if options.activeTab === 'settings'}
 				Settings
@@ -78,25 +78,25 @@
 				Games
 			{/if}
 		</h1>
-		<div class="line" style="width:50%;height:0.5px" />
+		<div class="line" style="width:50%;height:0.5px"></div>
 		<div class="center-row page-tabs">
-			<button class="page-tab" on:click={() => setActiveTab('home')}>
+			<button class="page-tab" onclick={() => setActiveTab('home')}>
 				<h1>Games</h1>
 			</button>
-			<!-- <button class="page-tab" on:click={() => setActiveTab('apps')}>
+			<!-- <button class="page-tab" onclick={() => setActiveTab('apps')}>
 				<h1>Apps</h1>
 			</button> -->
-			<button class="page-tab" on:click={() => setActiveTab('blog')}>
+			<button class="page-tab" onclick={() => setActiveTab('blog')}>
 				<h1>Updates</h1>
 			</button>
-			<button class="page-tab" on:click={() => setActiveTab('suggestions')}>
+			<button class="page-tab" onclick={() => setActiveTab('suggestions')}>
 				<h1>Suggestions</h1>
 			</button>
-			<button class="page-tab" on:click={() => setActiveTab('settings')}>
+			<button class="page-tab" onclick={() => setActiveTab('settings')}>
 				<h1>Settings</h1>
 			</button>
 		</div>
-		<div class="line" style="width:50%;height:0.5px" />
+		<div class="line" style="width:50%;height:0.5px"></div>
 		{#if options.activeTab === 'home' || options.activeTab === 'apps'}
 			<p>
 				{options.activeTab === 'apps' ? appsList.length : games.length}
@@ -115,7 +115,7 @@
 			<GamesComponent search={options.search} apps={options.activeTab === 'apps'} newTab={options.newTab} />
 		{:else if options.activeTab === 'settings'}
 			<p>No settings yet</p>
-			<input class="secret-bar" type="text" placeholder="Coder Debug..." bind:value={options.secret} on:change={onSecretChanged} />
+			<input class="secret-bar" type="text" placeholder="Coder Debug..." bind:value={options.secret} onchange={onSecretChanged} />
 		{:else if options.activeTab === 'blog'}
 			{#each blogPosts as blogPost}
 				<BlogComponent post={blogPost} />
@@ -143,7 +143,7 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
-		background: #051b27;
+		background: #0b140a;
 		color: white;
 		overflow: auto;
 	}

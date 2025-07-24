@@ -3,10 +3,12 @@
 	import appsList from '$lib/apps.js';
 	import GamesTab from '$lib/gamesTab.js';
 
-	export let search = '';
-	export let newTab = true;
-	export let apps = false; // looking through apps list
-	let showAllGames = false;
+    let props = $props();
+	let search = $derived(props.search);
+	let newTab = $derived(props.newTab || false);
+	let apps = $derived(props.apps || false); // looking through apps list
+
+	let showAllGames = $state(false);
 	const sortedGamesList = games.sort((game, sgame) => game.name.localeCompare(sgame.name));
 	const sortedAppsList = appsList.sort((game, sgame) => game.name.localeCompare(sgame.name));
 
@@ -31,7 +33,7 @@
 		{#each (apps ? sortedAppsList : sortedGamesList) as game, idx}
 			{#if showAllGames || (idx < 60)}
 				{#if game.name.toLowerCase().replace(/\s/gim, '').includes(search)}
-					<button class="game" on:click={() => openGame(game.url)} data-id={game.id}>
+					<button class="game" onclick={() => openGame(game.url)} data-id={game.id}>
 						<img alt="GameIcon" src={game.image} />
 						<p>{game.name}</p>
 					</button>
@@ -41,7 +43,7 @@
 	{/key}
 </div>
 {#if !showAllGames && (apps ? sortedAppsList : sortedGamesList).length > 60}
-	<button class="show-games" on:click={showGames}>
+	<button class="show-games" onclick={showGames}>
 		Show all games
 	</button>
 {/if}

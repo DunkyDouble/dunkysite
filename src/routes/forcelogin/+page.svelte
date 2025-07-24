@@ -9,7 +9,7 @@
 
 <div class="page">
 	<p style="font-size:24px">Welcome to the DunkySite</p>
-	<button on:click={openGameTab}>Enter Games</button>
+	<button onclick={openGameTab}>Enter Games</button>
 	<p>
         By entering the games page, you agree to the latest
         <a href="/terms" target="_blank">Terms of Service</a>
