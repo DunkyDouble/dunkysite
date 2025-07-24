@@ -279,12 +279,6 @@ export default [
         "url": libHost + "/files/cc-full.html"
     },
     {
-        "id": "cookieclickerreal2",
-        "name": "Cookie Clicker (Backup)",
-        "image": libHost + "/files/cookieclick_backup.jpg",
-        "url": "https://alkmefo-pj2408-dunkysite-not-official.vercel.app//files/cc-full.html"
-    },
-    {
         "id": "cookieclicker",
         "name": "Cooky Clickor v24.00145",
         "image": "https://www.cookingclassy.com/wp-content/uploads/2014/06/chocolate-chip-cookie-16.jpg",
