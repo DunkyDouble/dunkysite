@@ -66,6 +66,7 @@
     <p>
         Use of any external games or links is entirely at your own risk. We are not liable for issues or damages arising from their use.
     </p>
+    <p>DunkySite is not affiliated with any other brand names, companies or individuals mentioned on the website.</p>
 
     <h2>7. Analytics and Data Collection</h2>
     <p>
