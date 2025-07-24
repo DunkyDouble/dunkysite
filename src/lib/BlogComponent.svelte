@@ -4,29 +4,29 @@
 
 	const md = new MarkdownIt({
 		html: true,
-        	linkify: true,
-        	breaks: true,
-    	});
+    	linkify: true,
+    	breaks: true,
+    });
     
 	let { post } = $props();
 	let postHtml = $state('');
 
 	const defaultLinkOpenRender = md.renderer.rules.link_open || function (tokens, idx, options, env, self) {
-        	return self.renderToken(tokens, idx, options);
-    	};
+    	return self.renderToken(tokens, idx, options);
+    };
 	md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
-            	tokens[idx].attrSet('target', '_blank');
+        tokens[idx].attrSet('target', '_blank');
 
-        	// Pass the token to the default renderer.
-        	return defaultLinkOpenRender(tokens, idx, options, env, self);
-    	};
+    	// Pass the token to the default renderer.
+    	return defaultLinkOpenRender(tokens, idx, options, env, self);
+    };
     
 	onMount(() => {
-        	const env = {};
-        	const tokens = md.parse(post, env);
+    	const env = {};
+    	const tokens = md.parse(post, env);
 
-        	postHtml = md.renderer.render(tokens, md.options, env);
-    	});
+    	postHtml = md.renderer.render(tokens, md.options, env);
+    });
 </script>
 
 <div class="post">
