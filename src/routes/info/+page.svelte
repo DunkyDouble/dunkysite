@@ -1,7 +1,7 @@
 <main>
     <h1>Information & Concerns</h1>
-    <p>This website is not owned by, or affiliated Google or any listed companies/brand names.</p>
-    <p>The usage of this website is intended to only be selected users picked in-person.</p>
+    <p>This website is not owned by, or affiliated with Google or any listed companies/brand names.</p>
+    <p>The usage of this website is intended to only be by selected users picked in-person.</p>
     <br />
     <p>If you found this GitHub repository online, this is a small friends-only project only meant to be seen by people I know in real life.</p>
     <p>It's not intended for random people to use or share. I will not support you in running this repository yourself, or fixing problems with it.</p>

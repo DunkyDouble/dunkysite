@@ -1,6 +1,6 @@
 <main>
     <h1>Terms of Service</h1>
-    <i>Effective by July 24rd, 2025</i>
+    <i>Effective by July 24th, 2025</i>
 
     <p>
         By accessing and using this website ("DunkySite"),

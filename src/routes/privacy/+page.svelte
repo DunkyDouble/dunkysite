@@ -1,6 +1,6 @@
 <main>
     <h1>Privacy Policy</h1>
-    <i>Effective by July 24rd, 2025</i>
+    <i>Effective by July 24th, 2025</i>
 
     <p>
         This Privacy Policy explains what information we collect when you use DunkySite
