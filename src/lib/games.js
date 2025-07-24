@@ -1,4 +1,4 @@
-import ServerHosts from "./libHost";
+import ServerHosts from "./libHost.svelte.js";
 const libHost = ServerHosts.library;
 
 export default [
