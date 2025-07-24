@@ -1,0 +1,27 @@
+{
+	"name": "dunkysite",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev --host --port 19132",
+		"build": "vite build",
+		"preview": "vite preview",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"type": "module",
+	"devDependencies": {
+		"@sveltejs/adapter-vercel": "^5.8.0",
+		"@sveltejs/kit": "^2.25.2",
+		"eslint": "^9.31.0",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-svelte": "^3.11.0",
+		"prettier": "^3.6.2",
+		"prettier-plugin-svelte": "^3.4.0",
+		"svelte": "^5.36.14",
+		"vite": "^6.3.5"
+	},
+	"dependencies": {
+		"markdown-it": "^14.1.0"
+	}
+}
