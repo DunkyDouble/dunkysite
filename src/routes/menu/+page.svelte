@@ -114,7 +114,13 @@
 			</p>
 			<GamesComponent search={options.search} apps={options.activeTab === 'apps'} newTab={options.newTab} />
 		{:else if options.activeTab === 'settings'}
-			<p>No settings yet</p>
+			<p class="setting">
+                <span><label>
+                    <input type="checkbox">
+                    Show Developer menus
+                </label></span>
+                <span>Adds small information to some menus and elements. Not useful for normal users.</span>
+            </p>
 			<input class="secret-bar" type="text" placeholder="Coder Debug..." bind:value={options.secret} onchange={onSecretChanged} />
 		{:else if options.activeTab === 'blog'}
 			{#each blogPosts as blogPost}
@@ -244,4 +250,31 @@
 		height: 0;
 		outline: none;
 	}
+
+    .setting {
+        width: 60%;
+    }
+    .setting > span:nth-child(1) {
+        display: block;
+        height: 2em;
+    }
+    .setting > span:nth-child(1) label {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        font-weight: bold;
+        font-size: large;
+        
+        cursor: pointer;
+    }
+    .setting label input[type="checkbox"] {
+        width : 1.5em;
+        height: 1.5em;
+        margin-right: 8px;
+    }
+    .setting > span:nth-child(2) {
+        font-style: italic;
+        opacity: 0.75;
+    }
 </style>

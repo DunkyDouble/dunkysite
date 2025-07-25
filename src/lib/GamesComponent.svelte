@@ -8,7 +8,7 @@
 	let newTab = $derived(props.newTab || false);
 	let apps = $derived(props.apps || false); // looking through apps list
 
-	let showAllGames = $state(false);
+	let showAllGames = $state(true); // TODO: See if Chromebook devices can handle this now.
 	const sortedGamesList = games.sort((game, sgame) => game.name.localeCompare(sgame.name));
 	const sortedAppsList = appsList.sort((game, sgame) => game.name.localeCompare(sgame.name));
 
@@ -28,6 +28,7 @@
 	};
 </script>
 
+<p style={!props.debug ? "display:none" : ""}>Text</p>
 <div class="games-list">
 	{#key search}
 		{#each (apps ? sortedAppsList : sortedGamesList) as game, idx}
