@@ -1,13 +1,15 @@
 <script>
 	import { onMount } from 'svelte';
-
-	import games from '$lib/games.js';
-	import appsList from '$lib/apps.js';
-	import blogPosts from '$lib/blog';
-
-	import GamesTab from '$lib/gamesTab.js';
+    
 	import GamesComponent from '$lib/GamesComponent.svelte';
 	import BlogComponent from '$lib/BlogComponent.svelte';
+
+	import GamesTab from '$lib/gamesTab.js';
+    import Settings from '$lib/settings.js';
+
+	import gamesList from '$lib/games.js';
+	import appsList from '$lib/apps.js';
+	import blogPosts from '$lib/blog';
 
 	const options = $state({
 		search: '',
@@ -99,7 +101,7 @@
 		<div class="line" style="width:50%;height:0.5px"></div>
 		{#if options.activeTab === 'home' || options.activeTab === 'apps'}
 			<p>
-				{options.activeTab === 'apps' ? appsList.length : games.length}
+				{options.activeTab === 'apps' ? appsList.length : gamesList.length}
 				{options.activeTab === 'apps' ? 'apps' : "games"} |
 				<input class="search-bar" type="text" placeholder="Search..." bind:value={options.search} />
 				|
@@ -116,7 +118,14 @@
 		{:else if options.activeTab === 'settings'}
 			<p class="setting">
                 <span><label>
-                    <input type="checkbox">
+                    <input type="checkbox" bind:checked={$Settings.showAllGamesNeeded}>
+                    Hide too many games behind a button on startup
+                </label></span>
+                <span>Only shows a few games in the list when you first open the website, useful if your computer starts lagging immediately.</span>
+            </p>
+			<p class="setting">
+                <span><label>
+                    <input type="checkbox" bind:checked={$Settings.showDebugMenu}>
                     Show Developer menus
                 </label></span>
                 <span>Adds small information to some menus and elements. Not useful for normal users.</span>
