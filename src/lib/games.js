@@ -316,6 +316,12 @@ export default [
         "url": libHost + "/files/tunnelrush.html"
     },
     {
+        "id": "deltarune",
+        "name": "DELTARUNE",
+        "image": "https://assets-prd.ignimgs.com/2025/04/10/nintendoswitch2-deltarune-keyart-square-1744324739449.jpg?width=348&height=348&format=png",
+        "url": libHost + "/files/deltarune/predownloaded.html"
+    },
+    {
         "id": "Run 3",
         "name": "Run 3",
         "image": libHost + "/files/run3.avif",
