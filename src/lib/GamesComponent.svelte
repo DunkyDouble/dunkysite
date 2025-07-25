@@ -49,13 +49,13 @@
 
 <p style={$Settings.showDebugMenu ? "" : "display:none"}>
     <span style="color:#ff8a8a">{getGamesStatusCount(Unavailable.deleted, filteredGamesList)} deleted</span>
-    , 
+    ,
     <span style="color:#fff675">{getGamesStatusCount(Unavailable.unavailable, filteredGamesList)} unavailable</span>
-    , 
+    ,
     <span style="color:#6ed6ff">{getGamesStatusCount(Unavailable.cantEmbed, filteredGamesList)} cant embed</span>
-    , 
+    ,
     <span style="color:#d591ff">{getGamesStatusCount(Unavailable.suspicious, filteredGamesList)} suspicious</span>
-    , 
+    ,
     <span style="color:#ffffff">{getGamesStatusCount("all", filteredGamesList)} clean</span>
 </p>
 <div class="games-list">
@@ -63,7 +63,7 @@
 		<button class="game" onclick={() => openGame(game.url)} data-id={game.id}>
 			<img class="game-icon" alt="GameIcon" src={game.image} draggable="false" loading="lazy" />
 			<p class="game-name">{game.name}</p>
-            
+
             {#if $Settings.showDebugMenu}
                 <p class="game-debug-label">
                     {#if Unavailable.deleted.includes((new URL(game.url)).hostname)}

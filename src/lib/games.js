@@ -6,7 +6,7 @@ export default [
         "id": "stickmanhook",
         "name": "Stickman Hook",
         "image": "https://th.bing.com/th/id/OIP.Liuvto8fzLlrMxYg1FErKgHaHa?pid=ImgDet&rs=1",
-        "url": "https://classwork188.github.io/g/stickman-hook"
+        "url": "https://mountain658.github.io/g/stickmanhook/index.html"
     },
     {
         "id": "retrobowl",
@@ -25,12 +25,6 @@ export default [
         "name": "Slope",
         "image": "https://th.bing.com/th/id/OIP.JbYjE9J2tnkHUQIhDrMiXAAAAA?pid=ImgDet&rs=1",
         "url": "https://htmlpreview.github.io/?https://github.com/scheng123321/tmm-html5-cdn1/blob/master/slope/index.html"
-    },
-    {
-        "id": "slope",
-        "name": "Slope (Backup)",
-        "image": "https://th.bing.com/th/id/OIP.JbYjE9J2tnkHUQIhDrMiXAAAAA?pid=ImgDet&rs=1",
-        "url": "https://classwork188.github.io/g/slope/"
     },
     {
         "id": "penaltyshooters2",
@@ -66,7 +60,7 @@ export default [
         "id": "growup_the_cats",
         "name": "Grow Up The Cats",
         "image": libHost + "/files/grow-up-the-cats.png",
-        "url": "https://classwork188.github.io/g97/grow-up-the-cats"
+        "url": libHost + "/files/growupthecats/index.html"
     },
     {
         "id": "truck_loader",
