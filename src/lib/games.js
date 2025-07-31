@@ -209,7 +209,7 @@ export default [
     {
         "id": "flappybird",
         "name": "Flappy Bird",
-        "image": "https://flappy-bird.co/data/image/image.png",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0a/Flappy_Bird_icon.png/250px-Flappy_Bird_icon.png",
         "url": libHost + "/files/flbird/index.html"
     },
     {
@@ -251,13 +251,13 @@ export default [
     {
         "id": "bottleflip",
         "name": "Bottle Flip 3D",
-        "image": "https://ubguk.github.io/img/bottleflip3d/bottle-flip-3d.png",
+        "image": "https://play-lh.googleusercontent.com/sMpJpTPMtTMr9tfusBtbWIz_h2UdX3iwx8Ea4w6vJ-0vyFILvpIMj_JvwVSeS6Xq0bg",
         "url": libHost + "/files/flipbottle/index.html"
     },
     {
         "id": "doodlejump",
         "name": "Doodle Jump",
-        "image": "https://ubguk.github.io/img/doodle-jump/doodle-jump.png",
+        "image": "https://static.wikia.nocookie.net/doodlejump1/images/1/13/DJ_Paid_Icon.png",
         "url": "https://sgs-game-cdn.pages.dev/Projects/Doodle%20Jump/"
     },
     {
@@ -596,7 +596,7 @@ export default [
         id: 'ducklife1',
         name: 'Duck Life 1',
         url: libHost + "/files/anyflash.html?g=ducklife1",
-        image: 'https://th.bing.com/th/id/R.2da61bc75a37e80552c3529f7d4801c1?rik=7%2bCjMIqyLUGwKQ&pid=ImgRaw&r=0'
+        image: 'https://static.wikia.nocookie.net/ducklife/images/e/ea/Screenshot_2020-04-11_at_5.23.12_PM.png'
     },
     {
         id: 'ducklife2',
@@ -1110,7 +1110,7 @@ export default [
         "id": "tetris_flash",
         "name": "Tetris",
         "url": libHost + "/files/anyflash.html?g=flashtetris",
-        "image": "https://glibrary.gopon.xyz/flashtetris/splash.png"
+        "image": "https://tetris.wiki/images/5/52/Tetris_%28N3TWORK%29_icon.png"
     },
     {
         "id": "we_skate",

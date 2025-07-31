@@ -11,7 +11,6 @@
 
     let props = $props();
 
-    let shownGamesList = $state([]); // NOTE: This is also the apps list if we are told to use it
 	let showAllGames = $state(false);
 	let showAllGamesShow = $state(false);
     let showAllGamesNeeded = $derived($Settings.showAllGamesNeeded);
@@ -19,9 +18,10 @@
     $effect(() => {
         const fullList = (props.apps ? sortedAppsList : sortedGamesList)
             .filter(game => $Settings.showDebugMenu ? true :
-                !(Unavailable.deleted.includes((new URL(game.url)).hostname) || Unavailable.unavailable.includes((new URL(game.url)).hostname)))
+                !(Unavailable.deleted.includes((new URL(game.url)).hostname) || Unavailable.unavailable.includes((new URL(game.url)).hostname)));
+        const searchedList = fullList
             .filter(game => game.name.toLowerCase().replace(/\s/gim, '').includes(props.search.toLowerCase()));
-        shownGamesList = fullList
+        SiteState.shownGames = searchedList
             .slice(0, (showAllGames || !showAllGamesNeeded) ? Infinity : showAllGamesLength);
         showAllGamesShow = (fullList.length > showAllGamesLength) && showAllGamesNeeded && !showAllGames;
     });
@@ -51,21 +51,21 @@
 </script>
 
 <p style={$Settings.showDebugMenu ? "" : "display:none"}>
-    <span style="color:#ff8a8a">{getGamesStatusCount(Unavailable.deleted, shownGamesList)} deleted</span>
+    <span style="color:#ff8a8a">{getGamesStatusCount(Unavailable.deleted, SiteState.shownGames)} deleted</span>
     ,
-    <span style="color:#fff675">{getGamesStatusCount(Unavailable.unavailable, shownGamesList)} unavailable</span>
+    <span style="color:#fff675">{getGamesStatusCount(Unavailable.unavailable, SiteState.shownGames)} unavailable</span>
     ,
-    <span style="color:#6ed6ff">{getGamesStatusCount(Unavailable.cantEmbed, shownGamesList)} cant embed</span>
+    <span style="color:#6ed6ff">{getGamesStatusCount(Unavailable.cantEmbed, SiteState.shownGames)} cant embed</span>
     ,
-    <span style="color:#d591ff">{getGamesStatusCount(Unavailable.suspicious, shownGamesList)} suspicious</span>
+    <span style="color:#d591ff">{getGamesStatusCount(Unavailable.suspicious, SiteState.shownGames)} suspicious</span>
     ,
-    <span style="color:#ffffff">{getGamesStatusCount("all", shownGamesList)} clean</span>
+    <span style="color:#ffffff">{getGamesStatusCount("all", SiteState.shownGames)} clean</span>
 </p>
 {#if SiteState.beta}
     <p>We are working to bring more games soon! The list may be a bit small for now while we work on fixing deleted games, unavailable games, and adding new games!</p>
 {/if}
 <div class="games-list">
-	{#each shownGamesList as game}
+	{#each SiteState.shownGames as game}
 		<button class="game" onclick={() => openGame(game.url)} data-id={game.id}>
 			<img class="game-icon" alt="GameIcon" src={game.image} draggable="false" loading="lazy" />
 			<p class="game-name">{game.name}</p>

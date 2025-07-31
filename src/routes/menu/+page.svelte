@@ -120,7 +120,7 @@
 		<div class="line" style="width:50%;height:0.5px"></div>
 		{#if options.activeTab === 'home' || options.activeTab === 'apps'}
 			<p>
-				{options.activeTab === 'apps' ? appsList.length : gamesList.length}
+				{SiteState.shownGames.length}
 				{options.activeTab === 'apps' ? 'apps' : "games"} |
 				<input class="search-bar" type="text" placeholder="Search..." bind:value={options.search} />
 				|
