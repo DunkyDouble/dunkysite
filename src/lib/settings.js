@@ -2,6 +2,8 @@ import { writable } from 'svelte/store';
 import localforage from 'localforage';
 
 const defaultSettings = {
+    username: "",
+    usernameSetup: false,
     showDebugMenu: false,
     showAllGamesNeeded: false,
 };

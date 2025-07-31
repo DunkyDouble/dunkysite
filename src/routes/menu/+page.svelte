@@ -17,11 +17,21 @@
 		newTab: true,
 		activeTab: 'home'
 	});
-	const state = $state({
-		confirmed: false,
+	const state = $derived({
+		confirmed: $Settings.usernameSetup,
 		locked: false,
 		name: ''
 	});
+    const tryConfirmUsername = () => {
+        const username = String($Settings.username);
+        if (!username) return;
+        const fixedUsername = username.replace(/[\n\r]+/g, "").trim();
+        if (!fixedUsername) return;
+        if (fixedUsername.length <= 0) return;
+        if (fixedUsername.length > 50) return alert("That name is too long.");
+        $Settings.username = fixedUsername;
+        $Settings.usernameSetup = true;
+    };
 	const setActiveTab = (type) => {
 		options.activeTab = type;
 	};
@@ -59,10 +69,16 @@
 	</div>
 {:else if !state.confirmed}
 	<div class="main unconfirmed">
-		<h1>Confirm</h1>
-		<p>You are currently logging in as <em>{state.name}</em>.</p>
-		<p class="subtext">If this is not you, please contact the person who gave you this app.</p>
-		<button class="login" onclick={() => { state.confirmed = true; }}>Enter</button>
+		<h3>What is your name?</h3>
+        <input type="text" bind:value={$Settings.username}>
+		<p class="subtext" style="opacity: 1">This will let me know who you are if you have issues with the website.</p>
+		<button class="login" onclick={tryConfirmUsername}>Enter</button>
+        
+        <div class="unconfirmed-legal">
+            <span class="subtext" style="opacity: 1">By entering the games page, you agree to these documents:</span>
+            <a target="_blank" href="/terms">Terms of Service</a>
+            <a target="_blank" href="/privacy">Privacy Policy</a>
+        </div>
 	</div>
 {:else}
 	<div class="main center">
@@ -130,6 +146,8 @@
                 </label></span>
                 <span>Adds small information to some menus and elements. Not useful for normal users.</span>
             </p>
+            <a target="_blank" href="/terms">Terms of Service</a>
+            <a target="_blank" href="/privacy">Privacy Policy</a>
 			<input class="secret-bar" type="text" placeholder="Coder Debug..." bind:value={options.secret} onchange={onSecretChanged} />
 		{:else if options.activeTab === 'blog'}
 			{#each blogPosts as blogPost}
@@ -183,6 +201,14 @@
 		align-items: center;
 		justify-content: center;
 	}
+    .unconfirmed-legal {
+        margin-top: 32px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+    }
 	.subtext {
 		margin-block: 4px;
 		opacity: 0.5;
@@ -216,13 +242,17 @@
 	}
 
 	.secret-bar,
-	.search-bar {
+	.search-bar,
+    .unconfirmed input[type="text"] {
 		border: 1px solid white;
 		background: rgba(255, 255, 255, 0.1);
 		color: white;
 		padding: 4px;
 		border-radius: 4px;
 	}
+    .unconfirmed input[type="text"] {
+        margin-bottom: 8px;
+    }
 	.secret-bar {
 		position: absolute;
 		right: 4px;
