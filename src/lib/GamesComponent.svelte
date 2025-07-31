@@ -2,6 +2,7 @@
 	import GamesTab from '$lib/gamesTab.js';
     import Settings from '$lib/settings.js';
     import Unavailable from '$lib/unavailable.js';
+    import SiteState from '$lib/site-state.svelte.js';
 
 	import gamesList from '$lib/games.js';
 	import appsList from '$lib/apps.js';
@@ -10,15 +11,17 @@
 
     let props = $props();
 
-    let filteredGamesList = $state([]); // NOTE: This is also the apps list if we are told to use it
+    let shownGamesList = $state([]); // NOTE: This is also the apps list if we are told to use it
 	let showAllGames = $state(false);
 	let showAllGamesShow = $state(false);
     let showAllGamesNeeded = $derived($Settings.showAllGamesNeeded);
     const showAllGamesLength = 60; // how many games until we need to show the button
     $effect(() => {
         const fullList = (props.apps ? sortedAppsList : sortedGamesList)
+            .filter(game => $Settings.showDebugMenu ? true :
+                !(Unavailable.deleted.includes((new URL(game.url)).hostname) || Unavailable.unavailable.includes((new URL(game.url)).hostname)))
             .filter(game => game.name.toLowerCase().replace(/\s/gim, '').includes(props.search.toLowerCase()));
-        filteredGamesList = fullList
+        shownGamesList = fullList
             .slice(0, (showAllGames || !showAllGamesNeeded) ? Infinity : showAllGamesLength);
         showAllGamesShow = (fullList.length > showAllGamesLength) && showAllGamesNeeded && !showAllGames;
     });
@@ -48,18 +51,21 @@
 </script>
 
 <p style={$Settings.showDebugMenu ? "" : "display:none"}>
-    <span style="color:#ff8a8a">{getGamesStatusCount(Unavailable.deleted, filteredGamesList)} deleted</span>
+    <span style="color:#ff8a8a">{getGamesStatusCount(Unavailable.deleted, shownGamesList)} deleted</span>
     ,
-    <span style="color:#fff675">{getGamesStatusCount(Unavailable.unavailable, filteredGamesList)} unavailable</span>
+    <span style="color:#fff675">{getGamesStatusCount(Unavailable.unavailable, shownGamesList)} unavailable</span>
     ,
-    <span style="color:#6ed6ff">{getGamesStatusCount(Unavailable.cantEmbed, filteredGamesList)} cant embed</span>
+    <span style="color:#6ed6ff">{getGamesStatusCount(Unavailable.cantEmbed, shownGamesList)} cant embed</span>
     ,
-    <span style="color:#d591ff">{getGamesStatusCount(Unavailable.suspicious, filteredGamesList)} suspicious</span>
+    <span style="color:#d591ff">{getGamesStatusCount(Unavailable.suspicious, shownGamesList)} suspicious</span>
     ,
-    <span style="color:#ffffff">{getGamesStatusCount("all", filteredGamesList)} clean</span>
+    <span style="color:#ffffff">{getGamesStatusCount("all", shownGamesList)} clean</span>
 </p>
+{#if SiteState.beta}
+    <p>We are working to bring more games soon! The list may be a bit small for now while we work on fixing deleted games, unavailable games, and adding new games!</p>
+{/if}
 <div class="games-list">
-	{#each filteredGamesList as game}
+	{#each shownGamesList as game}
 		<button class="game" onclick={() => openGame(game.url)} data-id={game.id}>
 			<img class="game-icon" alt="GameIcon" src={game.image} draggable="false" loading="lazy" />
 			<p class="game-name">{game.name}</p>

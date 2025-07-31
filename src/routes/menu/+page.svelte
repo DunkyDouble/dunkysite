@@ -6,6 +6,7 @@
 
 	import GamesTab from '$lib/gamesTab.js';
     import Settings from '$lib/settings.js';
+    import SiteState from '$lib/site-state.svelte.js';
 
 	import gamesList from '$lib/games.js';
 	import appsList from '$lib/apps.js';
@@ -57,9 +58,11 @@
 	};
 </script>
 
-<div class="beta-bar">
-	<p>BETA</p>
-</div>
+{#if SiteState.beta}
+    <div class="beta-bar">
+    	<p>BETA</p>
+    </div>
+{/if}
 {#if state.locked}
 	<div class="main center">
 		<p>Forbidden</p>
