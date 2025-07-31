@@ -1265,8 +1265,8 @@ export default [
     {
         "id": "4th_and_goal",
         "name": "4th & Goal 2022",
-        "url": "https://classwork188.github.io/g2/4th-and-goal-2022",
-        "image": "https://classwork188.github.io/img/4th-and-goal-2022.png"
+        "url": libHost + "/files/4thandgoal2022/index.html",
+        "image": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/6d8c2360b6f5a5228802918450754f8f/4th-and-goal-2022.png"
     },
     {
         "id": "soccer_random",
