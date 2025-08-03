@@ -25,14 +25,6 @@
             .slice(0, (showAllGames || !showAllGamesNeeded) ? Infinity : showAllGamesLength);
         showAllGamesShow = (fullList.length > showAllGamesLength) && showAllGamesNeeded && !showAllGames;
     });
-    const getGamesStatusCount = (statusList, gamesList) => {
-        if (statusList === "all") {
-            const allList = [].concat(...Object.keys(Unavailable).map(key => Unavailable[key]));
-            const allStatusesList = gamesList.filter(game => allList.includes((new URL(game.url)).hostname));
-            return gamesList.length - allStatusesList.length;
-        }
-        return gamesList.filter(game => statusList.includes((new URL(game.url)).hostname)).length;
-    };
 
 	const openGame = (url) => {
 		if (url.startsWith('/')) {
@@ -51,15 +43,15 @@
 </script>
 
 <p style={$Settings.showDebugMenu ? "" : "display:none"}>
-    <span style="color:#ff8a8a">{getGamesStatusCount(Unavailable.deleted, SiteState.shownGames)} deleted</span>
+    <span style="color:#ff8a8a">{Unavailable.getGamesStatusCount(Unavailable.deleted, SiteState.shownGames)} deleted</span>
     ,
-    <span style="color:#fff675">{getGamesStatusCount(Unavailable.unavailable, SiteState.shownGames)} unavailable</span>
+    <span style="color:#fff675">{Unavailable.getGamesStatusCount(Unavailable.unavailable, SiteState.shownGames)} unavailable</span>
     ,
-    <span style="color:#6ed6ff">{getGamesStatusCount(Unavailable.cantEmbed, SiteState.shownGames)} cant embed</span>
+    <span style="color:#6ed6ff">{Unavailable.getGamesStatusCount(Unavailable.cantEmbed, SiteState.shownGames)} cant embed</span>
     ,
-    <span style="color:#d591ff">{getGamesStatusCount(Unavailable.suspicious, SiteState.shownGames)} suspicious</span>
+    <span style="color:#d591ff">{Unavailable.getGamesStatusCount(Unavailable.suspicious, SiteState.shownGames)} suspicious</span>
     ,
-    <span style="color:#ffffff">{getGamesStatusCount("all", SiteState.shownGames)} clean</span>
+    <span style="color:#ffffff">{Unavailable.getGamesStatusCount("all", SiteState.shownGames)} clean</span>
 </p>
 {#if SiteState.beta}
     <p>We are working to bring more games soon! The list may be a bit small for now while we work on fixing deleted games, unavailable games, and adding new games!</p>

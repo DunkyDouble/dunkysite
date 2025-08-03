@@ -1,6 +1,7 @@
 <script>
 	import games from '$lib/games.js';
 	import appsList from '$lib/apps.js';
+    import Unavailable from '$lib/unavailable.js';
 
     let testStarted = $state(false);
     let currentIndex = 0;
@@ -9,6 +10,10 @@
     const getOriginUrl = (url = "") => {
         const urlObj = new URL(url);
         return urlObj.origin;
+    };
+    const getHostname = (url = "") => {
+        const urlObj = new URL(url);
+        return urlObj.hostname;
     };
 
     let currentTestSet = $state([]);
@@ -51,6 +56,15 @@
         {#each currentTestSet as gameUrl}
             <div class="game">
                 <iframe src={gameUrl} title={gameUrl}></iframe>
+                {#if Unavailable.deleted.includes(getHostname(gameUrl))}
+                    <p style="color:#ff8a8a">deleted</p>
+                {:else if Unavailable.unavailable.includes(getHostname(gameUrl))}
+                    <p style="color:#fff675">unavailable</p>
+                {:else if Unavailable.cantEmbed.includes(getHostname(gameUrl))}
+                    <p style="color:#6ed6ff">cant embed</p>
+                {:else if Unavailable.suspicious.includes(getHostname(gameUrl))}
+                    <p style="color:#d591ff">suspicious</p>
+                {/if}
                 <p>{gameUrl}</p>
             </div>
         {/each}
@@ -75,6 +89,9 @@
         align-items: center;
     }
     .game > p {
+        margin: 4px 0;
+    }
+    .game > p:nth-child(3) {
         word-wrap: break-word;
     }
 </style>

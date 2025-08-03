@@ -15,9 +15,20 @@ const suspicious = [ // comment why its suspicious
     `zayaruzostreetorgan.com`,
 ];
 
+const getGamesStatusCount = (statusList, gamesList) => {
+    if (statusList === "all") {
+        const allList = [].concat(deleted, unavailable, cantEmbed, suspicious);
+        const allStatusesList = gamesList.filter(game => allList.includes((new URL(game.url)).hostname));
+        return gamesList.length - allStatusesList.length;
+    }
+    return gamesList.filter(game => statusList.includes((new URL(game.url)).hostname)).length;
+};
+
 export default {
     deleted,
     unavailable,
     cantEmbed,
     suspicious,
+    
+    getGamesStatusCount,
 };
