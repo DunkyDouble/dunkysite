@@ -7,12 +7,21 @@ const deleted = [
 ];
 const unavailable = [
     `html5.gamedistribution.com`,
+    `mountain658.github.io`,
+    `htmlpreview.github.io`,
+    `tiwb.github.io`,
+    `neonracergame.github.io`,
+    `mountain-game-games.github.io`,
+    `art-class.github.io`,
+    `23azostore.github.io`,
+    `mkgamesdev.github.io`,
+    `bitlifeonline.github.io`,
 ];
-const cantEmbed = [ 
+const cantEmbed = [
 
 ];
 const suspicious = [ // comment why its suspicious
-    `zayaruzostreetorgan.com`,
+    `zayaruzostreetorgan.com`, // Turned into some random fortnite website? no idea
 ];
 
 const getGamesStatusCount = (statusList, gamesList) => {
@@ -29,6 +38,6 @@ export default {
     unavailable,
     cantEmbed,
     suspicious,
-    
+
     getGamesStatusCount,
 };
