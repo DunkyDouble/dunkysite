@@ -93,12 +93,6 @@ export default [
         "url": libHost + "/files/anyflash.html?g=impossible_quiz1"
     },
     {
-        "id": "theimpossiblequiz2",
-        "name": "The Impossible Quiz 2",
-        "image": libHost + "/files/impossible2.jpg",
-        "url": libHost + "/files/anyflash.html?g=theimpossiblequiz2"
-    },
-    {
         "id": "riddleschool1",
         "name": "Riddle School",
         "image": libHost + "/files/riddleschool/riddleschool1.png",
@@ -303,12 +297,12 @@ export default [
         "image": "https://th.bing.com/th/id/OIP.fNP1nCqFFlKT2E7B76PfzQHaEo?pid=ImgDet&rs=1",
         "url": "https://neonracergame.github.io/"
     },
-    {
-        "id": "tunnelrush",
-        "name": "Tunnel Rush",
-        "image": "https://th.bing.com/th/id/OIP.K-3jAeAtidy3q4QU6l5JzQHaDb?pid=ImgDet&rs=1",
-        "url": libHost + "/files/tunnelrush.html"
-    },
+    // {
+    //     "id": "tunnelrush",
+    //     "name": "Tunnel Rush",
+    //     "image": "https://th.bing.com/th/id/OIP.K-3jAeAtidy3q4QU6l5JzQHaDb?pid=ImgDet&rs=1",
+    //     "url": libHost + "/files/tunnelrush.html"
+    // },
     {
         "id": "deltarune",
         "name": "DELTARUNE",
@@ -592,12 +586,6 @@ export default [
         url: 'https://mountain-game-games.github.io/g/paperio2/paperio2.html',
         image: libHost + "/files/paperio2.jpeg",
     },
-    //   {
-    //     id: 'impossiblequiz',
-    //     name: 'The Impossible Quiz',
-    //     url: 'https://proudparrot2.github.io/msg-archive/g_mes/impossiblequiz1/impossiblequiz1/index.html',
-    //     image: 'https://ih1.redbubble.net/image.489460698.9522/st,small,507x507-pad,600x600,f8f8f8.jpg'
-    //   },
     {
         id: 'ducklife1',
         name: 'Duck Life 1',
