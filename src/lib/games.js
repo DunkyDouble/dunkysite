@@ -24,7 +24,25 @@ export default [
         "id": "slope",
         "name": "Slope",
         "image": "https://th.bing.com/th/id/OIP.JbYjE9J2tnkHUQIhDrMiXAAAAA?pid=ImgDet&rs=1",
-        "url": "https://htmlpreview.github.io/?https://github.com/scheng123321/tmm-html5-cdn1/blob/master/slope/index.html"
+        "url": libHost + "/files/slope/index.html",
+    },
+    {
+        "id": "hexgl",
+        "name": "HexGL",
+        "image": "https://img.itch.zone/aW1nLzM2NjM2NzcuanBn/original/U1%2FbAe.jpg",
+        "url": libHost + "/files/hexgl/index.html",
+    },
+    {
+        "id": "madalincarsmultiplayer",
+        "name": "Madalin Cars Multiplayer",
+        "image": "https://images.crazygames.com/games/madalin-cars-multiplayer/cover_1x1-1695112368643.png",
+        "url": libHost + "/files/madalin-cars-multiplayer/index.html",
+    },
+    {
+        "id": "rollingsky",
+        "name": "Rolling Sky",
+        "image": "https://static.wikia.nocookie.net/rolling-sky/images/0/00/Rolling_Sky_Cover.PNG",
+        "url": libHost + "/files/rollingsky/index.html",
     },
     {
         "id": "penaltyshooters2",
@@ -188,6 +206,12 @@ export default [
         "image": libHost + "/files/worldhardgame.png",
         "url": libHost + "/files/anyflash.html?g=WorldsHardestGame"
     },
+    // { // game seems broken, maybe the other swfs arent being found or its a ruffle issue?
+    //     "id": "tanktrouble",
+    //     "name": "Tank Trouble",
+    //     "image": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/fabcacd8-a6c2-4afb-a907-897e83f3ef5f/tank-trouble.png",
+    //     "url": libHost + "/files/anyflash.html?g=tanktrouble/TankTrouble_v4.0"
+    // },
     {
         "id": "drivemad",
         "name": "Drive Mad",
@@ -1087,6 +1111,18 @@ export default [
         "name": "Parking Fury 3D: Beach City",
         "url": "https://classwork188.github.io/g72/parking-fury-3d-beach-city",
         "image": "https://classwork188.github.io/img/parking-fury-3d-beach-city.png"
+    },
+    {
+        "id": "vex_3",
+        "name": "Vex 3",
+        "url": libHost + "/files/vex3/index.html",
+        "image": "https://yepicdn.com/system/static/thumbs/big_tile_thumb/1811/thumb300_vex-3-static.jpg"
+    },
+    {
+        "id": "vex_4",
+        "name": "Vex 4",
+        "url": libHost + "/files/vex4/index.html",
+        "image": "https://htmlxm.github.io/thumb/vex-4.png"
     },
     {
         "id": "vex_8",
