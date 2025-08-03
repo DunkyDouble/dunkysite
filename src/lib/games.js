@@ -327,12 +327,12 @@ export default [
         "image": libHost + "/files/spelunky.png",
         "url": "https://yancharkin.github.io/SpelunkyClassicHDhtml5/"
     },
-    {
-        "id": "freerider3",
-        "name": "Free Rider 3",
-        "image": "https://a.silvergames.com/j/b/free-rider-jumps.jpg",
-        "url": libHost + "/files/freerider3.html"
-    },
+    // {
+    //     "id": "freerider3",
+    //     "name": "Free Rider 3",
+    //     "image": "https://a.silvergames.com/j/b/free-rider-jumps.jpg",
+    //     "url": libHost + "/files/freerider3.html"
+    // },
     {
         "id": "freeriderbuilder",
         "name": "Free Rider Builder",
@@ -404,7 +404,13 @@ export default [
         "id": "penguinfunk",
         "name": "Friday Night Funkin'",
         "image": libHost + "/files/fnf.avif",
-        "url": "https://theshovel.github.io/penguin-funk/?versionUpdate"
+        "url": "https://theshovel.rocks/co-funk/"
+    },
+    {
+        "id": "bees",
+        "name": "Bees!!",
+        "image": libHost + "/files/bees.png",
+        "url": "https://theshovel.rocks/bees/"
     },
     {
         "id": "papas_burgeria",
@@ -515,16 +521,16 @@ export default [
         "url": "https://classwork188.github.io/g/drift-boss/"
     },
     {
-        "id": "drifthunters",
-        "name": "Drift Hunters",
-        "image": libHost + "/files/drifthunt.png",
-        "url": "https://zayaruzostreetorgan.com/uploads/5/5/6/7/5567194/custom_themes/136734914403232081/drift_hunter.html"
-    },
-    {
         "id": "osu",
         "name": "osu!",
-        "url": "https://web-osu.github.io/",
+        "url": "https://webosu.online/",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Osu%21_Logo_2016.svg/1200px-Osu%21_Logo_2016.svg.png"
+    },
+    {
+        "id": "osumania",
+        "name": "osu!mania",
+        "url": "https://webosumania.com/",
+        "image": "https://pm1.aminoapps.com/7716/28302f8ea60e2c43e9c905acf47a527cf928265fr1-500-500v2_00.jpg"
     },
     {
         "id": "cuttherope",
