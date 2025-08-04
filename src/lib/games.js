@@ -712,14 +712,13 @@ export default [
         url: libHost + "/files/snowbattle/3kh0-assets-main-snowbattle/snowbattle/index.html",
         image: 'https://play-lh.googleusercontent.com/X8FEOENa_t5mlRllBh2RRLc6sMnPIq56Wxa2ndValDOmwzIRhAv7MG6fT97TLQ2DK48'
     },
-    // server not connecting
-    // {
-    //   id: 'smashkarts',
-    //   name: 'Smash Karts',
-    //   url: 'https://sgs-game-cdn.pages.dev/Projects/Smash%20Karts/',
-    //   image: 'https://geometry-dash.co/upload/imgs/smash-karts-logo.png'
+    // { // server not connecting
+    //     id: 'smashkarts',
+    //     name: 'Smash Karts',
+    //     "url": libHost + "/files/site-gnm/html/370.html",
+    //     "image": libHost + "/files/site-gnm/covers/370.png",
     // },
-    // {
+    // { // server not connecting
     //   id: 'shellshockers',
     //   name: 'Shell Shockers',
     //   url: '',
@@ -2610,12 +2609,6 @@ export default [
         "name": "Slowroads",
         "url": libHost + "/files/site-gnm/html/369.html",
         "image": libHost + "/files/site-gnm/covers/369.png",
-    },
-    {
-        "id": "gmmath_smash_karts",
-        "name": "Smash Karts",
-        "url": libHost + "/files/site-gnm/html/370.html",
-        "image": libHost + "/files/site-gnm/covers/370.png",
     },
     // { // broken
     //     "id": "gmmath_stickman_fight_ragdoll",
