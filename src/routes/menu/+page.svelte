@@ -151,6 +151,10 @@
             </p>
             <a target="_blank" href="/terms">Terms of Service</a>
             <a target="_blank" href="/privacy">Privacy Policy</a>
+            <p>
+                Thanks to 3kh0, gn-math, genizy, scheng123321, unxa, udbsite, 98corbins, burnedpopcorn, irv77, bubbls,
+                reunbozdo, Irusso for creating huge libraries of assets and game ports
+            </p>
 			<input class="secret-bar" type="text" placeholder="Coder Debug..." bind:value={options.secret} onchange={onSecretChanged} />
 		{:else if options.activeTab === 'blog'}
 			{#each blogPosts as blogPost}

@@ -57,6 +57,36 @@ export default [
         "url": libHost + "/files/getawayshootout/index.html"
     },
     {
+        "id": "8ballpool",
+        "name": "8-Ball Pool",
+        "image": "https://cdn.moogold.com/2024/10/8-ball-pool.jpg",
+        "url": libHost + "/files/anyflash.html?g=8BallPool"
+    },
+    {
+        "id": "10minutestilldawn",
+        "name": "10 Minutes Till Dawn",
+        "image": libHost + "/files/10minutestilldawn_430.png",
+        "url": libHost + "/files/10MinutesTillDawn.html"
+    },
+    {
+        "id": "peopleplayground",
+        "name": "People Playground",
+        "image": libHost + "/files/PeoplePlayground194.png",
+        "url": libHost + "/files/PeoplePlayground.html"
+    },
+    {
+        "id": "webfishing",
+        "name": "WebFishing",
+        "image": libHost + "/files/WebFishing423.png",
+        "url": libHost + "/files/WebFishing.html"
+    },
+    {
+        "id": "adofai",
+        "name": "A Dance of Fire and Ice",
+        "image": libHost + "/files/ADOFAI59.png",
+        "url": libHost + "/files/ADanceofFireandIce.html"
+    },
+    {
         "id": "raftwars",
         "name": "Raft Wars",
         "image": libHost + "/files/raftwars.png",
@@ -151,6 +181,12 @@ export default [
         "name": "Riddle Transfer 2",
         "image": libHost + "/files/riddleschool/riddletransfer2.png",
         "url": libHost + "/files/anyflash.html?g=riddleschool/riddletransfer2"
+    },
+    {
+        "id": "blockblast",
+        "name": "Block Blast",
+        "image": libHost + "/files/BlockBlast6.png",
+        "url": libHost + "/files/BlockBlast.html"
     },
     {
         "id": "parkourblock1",
@@ -532,12 +568,12 @@ export default [
         "url": "https://mountain-game-games.github.io/g/thereisnogame/index.html",
         "image": libHost + "/files/nogame.png",
     },
-    {
-        "id": "driftboss",
-        "name": "Drift Boss",
-        "image": libHost + "/files/drift-boss.png",
-        "url": "https://classwork188.github.io/g/drift-boss/"
-    },
+    // { // gets stuck on a loading screen
+    //     "id": "driftboss",
+    //     "name": "Drift Boss",
+    //     "image": libHost + "/files/drift-boss.png",
+    //     "url": libHost + "/files/DriftBoss.html",
+    // },
     {
         "id": "osu",
         "name": "osu!",
@@ -688,13 +724,6 @@ export default [
     //   name: 'Shell Shockers',
     //   url: '',
     //   image: 'https://play-lh.googleusercontent.com/P-nde227L29s8w5U44kTPLiEnMEJUhJpEr4jL6tD6LV65Xz0JZtI4wEyFN-smsNrx-Q'
-    // },
-    // Broken, not worth fixing since the web build on itch.io is also broken
-    // {
-    //   id: 'fireandice',
-    //   name: 'A Dance of Fire and Ice',
-    //   url: '',
-    //   image: 'https://play-lh.googleusercontent.com/L8rCly8hMWuP95PbihDZlSV2u0oGrs0hl2lEXboO7XHX2XalJZ1rjgOsFYXnEDWbpQ',
     // },
     {
         id: 'escapeprison',
@@ -917,8 +946,14 @@ export default [
     {
         "id": "bitlife",
         "name": "BitLife",
-        "url": "https://bitlifeonline.github.io/class/index.html",
+        "url": libHost + "/files/BitLife.html",
         "image": libHost + "/files/bitlife.png",
+    },
+    {
+        "id": "candycrush",
+        "name": "Candy Crush",
+        "url": libHost + "/files/CandyCrush.html",
+        "image": libHost + "/files/CandyCrush171.png",
     },
     {
         "id": "top_speed_racing_3d",
@@ -931,12 +966,6 @@ export default [
         "name": "Eggy Car",
         "url": "https://classwork188.github.io/g/eggy-car",
         "image": "https://classwork188.github.io/img/eggy-car.png"
-    },
-    {
-        "id": "a_dance_of_fire_and_ice",
-        "name": "A Dance of Fire and Ice",
-        "url": "https://classwork188.github.io/g8/a-dance-of-fire-and-ice",
-        "image": "https://classwork188.github.io/img/a-dance-of-fire-and-ice.png"
     },
     {
         "id": "rush_race_motocross",
@@ -1093,12 +1122,6 @@ export default [
         "name": "Unicycle Hero",
         "url": "https://classwork188.github.io/g3/unicycle-hero",
         "image": "https://classwork188.github.io/img/unicycle-hero.png"
-    },
-    {
-        "id": "_ball_pool",
-        "name": "8-Ball Pool",
-        "url": "https://classwork188.github.io/g8/8-ball-pool",
-        "image": "https://classwork188.github.io/img/8-ball-pool.png"
     },
     {
         "id": "pixwars_2",
@@ -1297,6 +1320,12 @@ export default [
         "name": "4th & Goal 2022",
         "url": libHost + "/files/4thandgoal2022/index.html",
         "image": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/6d8c2360b6f5a5228802918450754f8f/4th-and-goal-2022.png"
+    },
+    {
+        "id": "drifthunters",
+        "name": "Drift Hunters",
+        "url": libHost + "/files/DriftHunters.html",
+        "image": libHost + "/files/DriftHunters173.png",
     },
     {
         "id": "soccer_random",

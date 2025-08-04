@@ -64,6 +64,15 @@
         We do not control, maintain, or guarantee the availability, accuracy, or safety of these third-party games.
     </p>
     <p>
+        DunkySite does not claim ownership over the games hosted or linked on this Site,
+        unless explicitly stated otherwise. Nearly all games available on the Site are
+        the creations and intellectual property of their respective developers or publishers.
+    </p>
+    <p>
+        We host or embed these games for public enjoyment and discovery,
+        but all rights, trademarks, copyrights, and content remain with their original owners.
+    </p>
+    <p>
         Use of any external games or links is entirely at your own risk. We are not liable for issues or damages arising from their use.
     </p>
     <p>DunkySite is not affiliated with any other brand names, companies or individuals mentioned on the website.</p>
