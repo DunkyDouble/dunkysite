@@ -54,7 +54,7 @@
     <span style="color:#ffffff">{Unavailable.getGamesStatusCount("all", SiteState.shownGames)} clean</span>
 </p>
 {#if SiteState.beta}
-    <p>We are working to bring more games soon! The list may be a bit small for now while we work on fixing deleted games, unavailable games, and adding new games!</p>
+    <p>We are working to bring more games soon! The list may change a few times for now while we work on fixing deleted games, unavailable games, and adding new games!</p>
 {/if}
 <div class="games-list">
 	{#each SiteState.shownGames as game}
