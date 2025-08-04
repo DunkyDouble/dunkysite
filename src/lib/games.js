@@ -756,6 +756,18 @@ export default [
         image: 'https://play-lh.googleusercontent.com/EPV1TB4So1lB0DGrdCVExDpNU8ML67nd8OqBeoOIM-s6sDicxmDdPvCXD6n7LKevFl0'
     },
     {
+        id: 'sigmaclicker',
+        name: "SIGMA CLICKER",
+        url: 'https://studio.penguinmod.com/embed.html?fps=60&clones=Infinity&offscreen&size=640x360&autoplay&addons=vol-slider%2Cremove-curved-stage-border#6418228981',
+        image: libHost + '/files/SIGMACLICKER.png',
+    },
+    {
+        id: 'sigmaclicker2',
+        name: "SIGMA CLICKER 2",
+        url: 'https://studio.penguinmod.com/embed.html?fps=60&clones=Infinity&offscreen&size=640x360&autoplay&addons=vol-slider%2Cremove-curved-stage-border#sigma2',
+        image: libHost + '/files/SIGMACLICKER2.png',
+    },
+    {
         id: 'sausageflip',
         name: "Sausage Flip",
         url: 'https://classwork188.github.io/g6/sausage-flip/',
