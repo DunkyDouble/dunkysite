@@ -2899,24 +2899,24 @@ export default [
         "url": libHost + "/files/site-gnm/html/417.html",
         "image": libHost + "/files/site-gnm/covers/417.png",
     },
-    {
-        "id": "gmmath_weapon_craft_run",
-        "name": "Weapon Craft Run",
-        "url": libHost + "/files/site-gnm/html/418.html",
-        "image": libHost + "/files/site-gnm/covers/418.png",
-    },
-    {
-        "id": "gmmath_weapon_upgrade_rush",
-        "name": "Weapon Upgrade Rush",
-        "url": libHost + "/files/site-gnm/html/419.html",
-        "image": libHost + "/files/site-gnm/covers/419.png",
-    },
-    {
-        "id": "gmmath_weapon_scale",
-        "name": "Weapon Scale",
-        "url": libHost + "/files/site-gnm/html/420.html",
-        "image": libHost + "/files/site-gnm/covers/420.png",
-    },
+    // {
+    //     "id": "gmmath_weapon_craft_run",
+    //     "name": "Weapon Craft Run",
+    //     "url": libHost + "/files/site-gnm/html/418.html",
+    //     "image": libHost + "/files/site-gnm/covers/418.png",
+    // },
+    // {
+    //     "id": "gmmath_weapon_upgrade_rush",
+    //     "name": "Weapon Upgrade Rush",
+    //     "url": libHost + "/files/site-gnm/html/419.html",
+    //     "image": libHost + "/files/site-gnm/covers/419.png",
+    // },
+    // {
+    //     "id": "gmmath_weapon_scale",
+    //     "name": "Weapon Scale",
+    //     "url": libHost + "/files/site-gnm/html/420.html",
+    //     "image": libHost + "/files/site-gnm/covers/420.png",
+    // },
     // {
     //     "id": "gmmath_rich_run_3d",
     //     "name": "Rich Run 3D",
