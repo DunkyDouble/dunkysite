@@ -110,24 +110,24 @@ export default [
         "image": libHost + "/files/grow-up-the-cats.png",
         "url": libHost + "/files/growupthecats/index.html"
     },
-    {
-        "id": "truck_loader",
-        "name": "Truck Loader",
-        "image": libHost + "/files/truck-loader.png",
-        "url": "https://classwork188.github.io/g26/truck-loader"
-    },
-    {
-        "id": "truck_loader_4",
-        "name": "Truck Loader 4",
-        "image": libHost + "/files/truck-loader-4.png",
-        "url": "https://classwork188.github.io/g26/truck-loader-4"
-    },
-    {
-        "id": "fliprunner",
-        "name": "Flip Runner",
-        "image": libHost + "/files/flip_runnerunnamed.webp",
-        "url": "https://classwork188.github.io/g26/flip-runner"
-    },
+    // {
+    //     "id": "truck_loader",
+    //     "name": "Truck Loader",
+    //     "image": libHost + "/files/truck-loader.png",
+    //     "url": "https://classwork188.github.io/g26/truck-loader"
+    // },
+    // {
+    //     "id": "truck_loader_4",
+    //     "name": "Truck Loader 4",
+    //     "image": libHost + "/files/truck-loader-4.png",
+    //     "url": "https://classwork188.github.io/g26/truck-loader-4"
+    // },
+    // {
+    //     "id": "fliprunner",
+    //     "name": "Flip Runner",
+    //     "image": libHost + "/files/flip_runnerunnamed.webp",
+    //     "url": "https://classwork188.github.io/g26/flip-runner"
+    // },
     {
         "id": "alien_hominid",
         "name": "Alien Hominid",
@@ -266,12 +266,12 @@ export default [
         "image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0a/Flappy_Bird_icon.png/250px-Flappy_Bird_icon.png",
         "url": libHost + "/files/flbird/index.html"
     },
-    {
-        "id": "basketbros",
-        "name": "Basket Bros",
-        "image": "https://th.bing.com/th/id/OIP.7zrhhPQquAvobLaGTb6W2wHaEK?pid=ImgDet&rs=1",
-        "url": "https://classwork188.github.io/g7/basket-bros/"
-    },
+    // {
+    //     "id": "basketbros",
+    //     "name": "Basket Bros",
+    //     "image": "https://th.bing.com/th/id/OIP.7zrhhPQquAvobLaGTb6W2wHaEK?pid=ImgDet&rs=1",
+    //     "url": "https://classwork188.github.io/g7/basket-bros/"
+    // },
     {
         "id": "basketballstars",
         "name": "BasketBall Stars",
@@ -767,12 +767,12 @@ export default [
         url: 'https://studio.penguinmod.com/embed.html?fps=60&clones=Infinity&offscreen&size=640x360&autoplay&addons=vol-slider%2Cremove-curved-stage-border#sigma2',
         image: libHost + '/files/SIGMACLICKER2.png',
     },
-    {
-        id: 'sausageflip',
-        name: "Sausage Flip",
-        url: 'https://classwork188.github.io/g6/sausage-flip/',
-        image: libHost + '/files/sauysage.avif',
-    },
+    // {
+    //     id: 'sausageflip',
+    //     name: "Sausage Flip",
+    //     url: 'https://classwork188.github.io/g6/sausage-flip/',
+    //     image: libHost + '/files/sauysage.avif',
+    // },
     {
         id: '1v1lol',
         name: "1v1.lol",
@@ -851,109 +851,17 @@ export default [
         url: libHost + "/files/anyflash.html?g=earth-taken-3",
         image: libHost + "/files/earthtaken3.jpg",
     },
+    // { // broken, cropped screen
+    //     id: 'papersplease',
+    //     name: 'Papers, Please',
+    //     url: libHost + "/files/anyflash.html?g=site-gnm/187",
+    //     image: libHost + "/files/site-gnm/187.png",
+    // },
     {
         id: 'pokemonemerald',
         name: 'Pokemon Emerald',
         url: "https://mkgamesdev.github.io/MKGBA2.0/launcher.html#pokemonemerald",
         image: libHost + "/files/pkem.jpg",
-    },
-    
-    // taken from tombofthemask.github.io
-    {
-        "id": "merge_round_racers",
-        "name": "Merge Round Racers",
-        "url": "https://classwork188.github.io/g7/merge-round-racers",
-        "image": "https://classwork188.github.io/img/merge-round-racers.png"
-    },
-    {
-        "id": "jumping_shell",
-        "name": "Jumping Shell",
-        "url": "https://classwork188.github.io/g5/jumping-shell",
-        "image": "https://classwork188.github.io/img/jumping-shell.png"
-    },
-    {
-        "id": "stick_defenders",
-        "name": "Stick Defenders",
-        "url": "https://classwork188.github.io/g6/stick-defenders",
-        "image": "https://classwork188.github.io/img/stick-defenders.png"
-    },
-    {
-        "id": "aliens_nest",
-        "name": "Alien's Nest",
-        "url": "https://classwork188.github.io/g16/aliens-nest",
-        "image": "https://classwork188.github.io/img/aliens-nest.png"
-    },
-    {
-        "id": "hide_and_smash",
-        "name": "Hide & Smash",
-        "url": "https://classwork188.github.io/g177/hide-and-smash",
-        "image": "https://classwork188.github.io/img/hide-and-smash.png"
-    },
-    {
-        "id": "blumgi_slime",
-        "name": "Blumgi Slime",
-        "url": "https://classwork188.github.io/g2/blumgi-slime",
-        "image": "https://classwork188.github.io/img/blumgi-slime.png"
-    },
-    {
-        "id": "offroader_v5",
-        "name": "Offroader V5",
-        "url": "https://classwork188.github.io/g5/offroader-v5",
-        "image": "https://classwork188.github.io/img/offroader-v5.png"
-    },
-    {
-        "id": "fnf_xe",
-        "name": "Friday Night Funkin' VS. XE",
-        "url": "https://classwork188.github.io/fnf3/fnf-xe",
-        "image": "https://classwork188.github.io/img/fnf-xe.png"
-    },
-    {
-        "id": "stickman_archero_fight",
-        "name": "Stickman Archero Fight",
-        "url": "https://classwork188.github.io/g69/stickman-archero-fight",
-        "image": "https://classwork188.github.io/img/stickman-archero-fight.png"
-    },
-    {
-        "id": "stack",
-        "name": "Stack",
-        "url": "https://classwork188.github.io/g2/stack",
-        "image": "https://classwork188.github.io/img/stack.png"
-    },
-    {
-        "id": "temple_of_boom",
-        "name": "Temple of Boom",
-        "url": "https://classwork188.github.io/g3/temple-of-boom",
-        "image": "https://classwork188.github.io/img/temple-of-boom.png"
-    },
-    {
-        "id": "gunspin",
-        "name": "Gunspin",
-        "url": "https://classwork188.github.io/g/gunspin",
-        "image": "https://classwork188.github.io/img/gunspin.png"
-    },
-    {
-        "id": "furious_racing_3d",
-        "name": "Furious Racing 3D",
-        "url": "https://classwork188.github.io/g7/furious-racing-3d",
-        "image": "https://classwork188.github.io/img/furious-racing-3d.png"
-    },
-    {
-        "id": "moto_x_m_winter",
-        "name": "Moto X3M Winter",
-        "url": "https://classwork188.github.io/g/moto-x3m-winter",
-        "image": "https://classwork188.github.io/img/moto-x3m-winter.png"
-    },
-    {
-        "id": "lethal_sniper_3d_army_soldier",
-        "name": "Lethal Sniper 3D Army Soldier",
-        "url": "https://classwork188.github.io/g16/lethal-sniper-3d-army-soldier",
-        "image": "https://classwork188.github.io/img/lethal-sniper-3d-army-soldier.png"
-    },
-    {
-        "id": "highway_traffic",
-        "name": "Highway Traffic",
-        "url": "https://classwork188.github.io/g7/highway-traffic",
-        "image": "https://classwork188.github.io/img/highway-traffic.png"
     },
     {
         "id": "bitlife",
@@ -968,186 +876,6 @@ export default [
         "image": libHost + "/files/CandyCrush171.png",
     },
     {
-        "id": "top_speed_racing_3d",
-        "name": "Top Speed Racing 3D",
-        "url": "https://classwork188.github.io/g/top-speed-racing-3d",
-        "image": "https://classwork188.github.io/img/top-speed-racing-3d.png"
-    },
-    {
-        "id": "eggy_car",
-        "name": "Eggy Car",
-        "url": "https://classwork188.github.io/g/eggy-car",
-        "image": "https://classwork188.github.io/img/eggy-car.png"
-    },
-    {
-        "id": "rush_race_motocross",
-        "name": "Rush Race Motocross",
-        "url": "https://classwork188.github.io/g69/rush-race-motocross",
-        "image": "https://classwork188.github.io/img/rush-race-motocross.png"
-    },
-    {
-        "id": "n_gon",
-        "name": "n-gon",
-        "url": "https://classwork188.github.io/g8/n-gon",
-        "image": "https://classwork188.github.io/img/n-gon.png"
-    },
-    {
-        "id": "hills_of_steel",
-        "name": "Hills of Steel",
-        "url": "https://classwork188.github.io/g177/hills-of-steel",
-        "image": "https://classwork188.github.io/img/hills-of-steel.png"
-    },
-    {
-        "id": "slopey",
-        "name": "slopey",
-        "url": "https://classwork188.github.io/g177/slopey",
-        "image": "https://classwork188.github.io/img/slopey.png"
-    },
-    {
-        "id": "among_us",
-        "name": "Among Us",
-        "url": "https://classwork188.github.io/g/among-us",
-        "image": "https://classwork188.github.io/img/among-us.png"
-    },
-    {
-        "id": "highway_bike_simulator",
-        "name": "Highway Bike Simulator",
-        "url": "https://classwork188.github.io/g72/highway-bike-simulator",
-        "image": "https://classwork188.github.io/img/highway-bike-simulator.png"
-    },
-    {
-        "id": "house_of_hazards",
-        "name": "House of Hazards",
-        "url": "https://classwork188.github.io/g/house-of-hazards",
-        "image": "https://classwork188.github.io/img/house-of-hazards.png"
-    },
-    {
-        "id": "fnf_b_sides",
-        "name": "Friday Night Funkin' B-Sides",
-        "url": "https://classwork188.github.io/fnf3/fnf-b-sides",
-        "image": "https://classwork188.github.io/img/fnf-b-sides.png"
-    },
-    {
-        "id": "traffic_rush",
-        "name": "Traffic Rush",
-        "url": "https://classwork188.github.io/g177/traffic-rush",
-        "image": "https://classwork188.github.io/img/traffic-rush.png"
-    },
-    {
-        "id": "stickman_climb_",
-        "name": "Stickman Climb 2",
-        "url": "https://classwork188.github.io/g6/stickman-climb-2",
-        "image": "https://classwork188.github.io/img/stickman-climb-2.png"
-    },
-    {
-        "id": "gold_digger_frvr",
-        "name": "Gold Digger FRVR",
-        "url": "https://classwork188.github.io/g4/gold-digger-frvr",
-        "image": "https://classwork188.github.io/img/gold-digger-frvr.png"
-    },
-    // {
-    //   "id": "parkour_block_3d",
-    //   "name": "parkour-block-3d",
-    //   "url": "https://classwork188.github.io/g/parkour-block-3d",
-    //   "image": "https://classwork188.github.io/img/parkour-block-3d.png"
-    // },
-    {
-        "id": "murder",
-        "name": "Murder",
-        "url": "https://classwork188.github.io/g5/murder",
-        "image": "https://classwork188.github.io/img/murder.png"
-    },
-    // {
-    //   "id": "tomb_of_the_mask",
-    //   "name": "tomb-of-the-mask",
-    //   "url": "https://classwork188.github.io/g8/tomb-of-the-mask",
-    //   "image": "https://classwork188.github.io/img/tomb-of-the-mask.png"
-    // },
-    {
-        "id": "madalin_stunt_cars_",
-        "name": "Madalin Stunt Cars 2",
-        "url": "https://classwork188.github.io/g/madalin-stunt-cars-2",
-        "image": "https://classwork188.github.io/img/madalin-stunt-cars-2.png"
-    },
-    // {
-    //   "id": "geometry_dash",
-    //   "name": "geometry-dash",
-    //   "url": "https://classwork188.github.io/g8/geometry-dash",
-    //   "image": "https://classwork188.github.io/img/geometry-dash.png"
-    // },
-    {
-        "id": "parking_fury_3d_night_thief",
-        "name": "Parking Fury 3D: Night Thief",
-        "url": "https://classwork188.github.io/g72/parking-fury-3d-night-thief",
-        "image": "https://classwork188.github.io/img/parking-fury-3d-night-thief.png"
-    },
-    {
-        "id": "moto_x3m",
-        "name": "Moto X3M",
-        "url": "https://classwork188.github.io/g8/moto-x3m",
-        "image": "https://classwork188.github.io/img/moto-x3m.png"
-    },
-    {
-        "id": "fruit_ninja",
-        "name": "Fruit Ninja",
-        "url": "https://classwork188.github.io/g69/fruit-ninja",
-        "image": "https://classwork188.github.io/img/fruit-ninja.png"
-    },
-    {
-        "id": "archer_master_d_castle_defense",
-        "name": "Archer Master 3D",
-        "url": "https://classwork188.github.io/g26/archer-master-3d-castle-defense",
-        "image": "https://classwork188.github.io/img/archer-master-3d-castle-defense.png"
-    },
-    {
-        "id": "bacon_may_die",
-        "name": "Bacon May Die",
-        "url": "https://classwork188.github.io/g26/bacon-may-die",
-        "image": "https://classwork188.github.io/img/bacon-may-die.png"
-    },
-    {
-        "id": "fury_wars",
-        "name": "Fury Wars",
-        "url": "https://classwork188.github.io/g177/fury-wars",
-        "image": "https://classwork188.github.io/img/fury-wars.png"
-    },
-    {
-        "id": "two_neon_boxes",
-        "name": "Two Neon Boxes",
-        "url": "https://classwork188.github.io/g9/two-neon-boxes",
-        "image": "https://classwork188.github.io/img/two-neon-boxes.png"
-    },
-    {
-        "id": "sharkio",
-        "name": "shark.io",
-        "url": "https://classwork188.github.io/g177/sharkio",
-        "image": "https://classwork188.github.io/img/sharkio.png"
-    },
-    {
-        "id": "top_speed_3d",
-        "name": "Top Speed 3D",
-        "url": "https://classwork188.github.io/g3/top-speed-3d",
-        "image": "https://classwork188.github.io/img/top-speed-3d.png"
-    },
-    {
-        "id": "unicycle_hero",
-        "name": "Unicycle Hero",
-        "url": "https://classwork188.github.io/g3/unicycle-hero",
-        "image": "https://classwork188.github.io/img/unicycle-hero.png"
-    },
-    {
-        "id": "pixwars_2",
-        "name": "Pixwars 2",
-        "url": "https://classwork188.github.io/g6/pixwars-2",
-        "image": "https://classwork188.github.io/img/pixwars-2.png"
-    },
-    {
-        "id": "parking_fury_d_beach_city",
-        "name": "Parking Fury 3D: Beach City",
-        "url": "https://classwork188.github.io/g72/parking-fury-3d-beach-city",
-        "image": "https://classwork188.github.io/img/parking-fury-3d-beach-city.png"
-    },
-    {
         "id": "vex_3",
         "name": "Vex 3",
         "url": libHost + "/files/vex3/index.html",
@@ -1160,172 +888,10 @@ export default [
         "image": "https://htmlxm.github.io/thumb/vex-4.png"
     },
     {
-        "id": "vex_8",
-        "name": "Vex 8",
-        "url": "https://classwork188.github.io/g16/vex-8",
-        "image": "https://classwork188.github.io/img/vex-8.png"
-    },
-    {
-        "id": "tiny_fishing",
-        "name": "Tiny Fishing",
-        "url": "https://classwork188.github.io/g/tiny-fishing",
-        "image": "https://classwork188.github.io/img/tiny-fishing.png"
-    },
-    {
         "id": "tetris_flash",
         "name": "Tetris",
         "url": libHost + "/files/anyflash.html?g=flashtetris",
         "image": "https://tetris.wiki/images/5/52/Tetris_%28N3TWORK%29_icon.png"
-    },
-    {
-        "id": "we_skate",
-        "name": "We Skate",
-        "url": "https://classwork188.github.io/g20/we-skate",
-        "image": "https://classwork188.github.io/img/we-skate.png"
-    },
-    {
-        "id": "fireboy_and_watergirl_light_temple",
-        "name": "Fire Boy Water Girl 2",
-        "url": "https://classwork188.github.io/g26/fireboy-and-watergirl-2-light-temple",
-        "image": "https://classwork188.github.io/img/fireboy-and-watergirl-2-light-temple.png"
-    },
-    {
-        "id": "snow_rider_3d",
-        "name": "Snow Rider 3D",
-        "url": "https://classwork188.github.io/g8/snow-rider-3d",
-        "image": "https://classwork188.github.io/img/snow-rider-3d.png"
-    },
-    {
-        "id": "monster_tracks",
-        "name": "Monster Tracks",
-        "url": "https://classwork188.github.io/g5/monster-tracks",
-        "image": "https://classwork188.github.io/img/monster-tracks.png"
-    },
-    {
-        "id": "raft_wars",
-        "name": "Raft Wars Remastered",
-        "url": "https://classwork188.github.io/g/raft-wars",
-        "image": "https://classwork188.github.io/img/raft-wars.png"
-    },
-    {
-        "id": "snake_is_mlg_edition",
-        "name": "Snake.is MLG Edition",
-        "url": "https://classwork188.github.io/g177/snake-is-mlg-edition",
-        "image": "https://classwork188.github.io/img/snake-is-mlg-edition.png"
-    },
-    {
-        "id": "digging_master",
-        "name": "Digging Master",
-        "url": "https://classwork188.github.io/g69/digging-master",
-        "image": "https://classwork188.github.io/img/digging-master.png"
-    },
-    {
-        "id": "fnf_hatsune_miku",
-        "name": "Friday Night Funkin' VS. Hatsune Miku",
-        "url": "https://classwork188.github.io/fnf3/fnf-hatsune-miku",
-        "image": "https://classwork188.github.io/img/fnf-hatsune-miku.png"
-    },
-    {
-        "id": "court_kings_3d",
-        "name": "Court Kings 3D",
-        "url": "https://classwork188.github.io/g16/court-kings-3d",
-        "image": "https://classwork188.github.io/img/court-kings-3d.png"
-    },
-    {
-        "id": "idle_digging_tycoon",
-        "name": "Idle Digging Tycoon",
-        "url": "https://classwork188.github.io/g5/idle-digging-tycoon",
-        "image": "https://classwork188.github.io/img/idle-digging-tycoon.png"
-    },
-    {
-        "id": "stacktris",
-        "name": "Stacktris",
-        "url": "https://classwork188.github.io/g6/stacktris",
-        "image": "https://classwork188.github.io/img/stacktris.png"
-    },
-    {
-        "id": "parkour_race",
-        "name": "Parkour Race",
-        "url": "https://classwork188.github.io/g72/parkour-race",
-        "image": "https://classwork188.github.io/img/parkour-race.png"
-    },
-    {
-        "id": "toon_off",
-        "name": "Toon Off",
-        "url": "https://classwork188.github.io/g3/toon-off",
-        "image": "https://classwork188.github.io/img/toon-off.png"
-    },
-    {
-        "id": "hypersnake",
-        "name": "HYPER SNAKE",
-        "url": "https://classwork188.github.io/g177/hypersnake",
-        "image": "https://classwork188.github.io/img/hypersnake.png"
-    },
-    {
-        "id": "cluster_rush",
-        "name": "Cluster Rush",
-        "url": "https://classwork188.github.io/g8/cluster-rush",
-        "image": "https://classwork188.github.io/img/cluster-rush.png"
-    },
-    {
-        "id": "rooftop_snipers_2",
-        "name": "Rooftop Snipers 2",
-        "url": "https://classwork188.github.io/g6/rooftop-snipers-2",
-        "image": "https://classwork188.github.io/img/rooftop-snipers-2.png"
-    },
-    {
-        "id": "soccer_skills_champions_league",
-        "name": "Soccer Skills: Champions League",
-        "url": "https://classwork188.github.io/g6/soccer-skills-champions-league",
-        "image": "https://classwork188.github.io/img/soccer-skills-champions-league.png"
-    },
-    {
-        "id": "blumgi_dragon",
-        "name": "Blumgi Dragon",
-        "url": "https://classwork188.github.io/g177/blumgi-dragon",
-        "image": "https://classwork188.github.io/img/blumgi-dragon.png"
-    },
-    {
-        "id": "water_color_sort",
-        "name": "Water Color Sort",
-        "url": "https://classwork188.github.io/g3/water-color-sort",
-        "image": "https://classwork188.github.io/img/water-color-sort.png"
-    },
-    {
-        "id": "ragdoll_hit",
-        "name": "Ragdoll Hit",
-        "url": "https://classwork188.github.io/g69/ragdoll-hit",
-        "image": "https://classwork188.github.io/img/ragdoll-hit.png"
-    },
-    {
-        "id": "idle_lumber_inc",
-        "name": "Idle Lumber Inc",
-        "url": "https://classwork188.github.io/g5/idle-lumber-inc",
-        "image": "https://classwork188.github.io/img/idle-lumber-inc.png"
-    },
-    {
-        "id": "moto_x3m_2",
-        "name": "Moto X3M 2",
-        "url": "https://classwork188.github.io/g8/moto-x3m-2",
-        "image": "https://classwork188.github.io/img/moto-x3m-2.png"
-    },
-    {
-        "id": "thumb_fighter",
-        "name": "Thumb Fighter Turbo",
-        "url": "https://classwork188.github.io/g3/thumb-fighter",
-        "image": "https://classwork188.github.io/img/thumb-fighter.png"
-    },
-    {
-        "id": "burnout_extreme_drift_2",
-        "name": "Burnout Extreme Drift 2",
-        "url": "https://classwork188.github.io/g26/burnout-extreme-drift-2",
-        "image": "https://classwork188.github.io/img/burnout-extreme-drift-2.png"
-    },
-    {
-        "id": "tag_2",
-        "name": "Tag 2",
-        "url": "https://classwork188.github.io/g177/tag-2",
-        "image": "https://classwork188.github.io/img/tag-2.png"
     },
     {
         "id": "4th_and_goal",
@@ -1340,375 +906,9 @@ export default [
         "image": libHost + "/files/DriftHunters173.png",
     },
     {
-        "id": "soccer_random",
-        "name": "Soccer Random",
-        "url": "https://classwork188.github.io/g8/soccer-random",
-        "image": "https://classwork188.github.io/img/soccer-random.png"
-    },
-    {
-        "id": "shady_bears",
-        "name": "Shady Bears",
-        "url": "https://classwork188.github.io/g177/shady-bears",
-        "image": "https://classwork188.github.io/img/shady-bears.png"
-    },
-    {
-        "id": "bullet_bros",
-        "name": "Bullet Bros",
-        "url": "https://classwork188.github.io/g69/bullet-bros",
-        "image": "https://classwork188.github.io/img/bullet-bros.png"
-    },
-    {
-        "id": "paint_strike",
-        "name": "Paint Strike",
-        "url": "https://classwork188.github.io/g16/paint-strike",
-        "image": "https://classwork188.github.io/img/paint-strike.png"
-    },
-    {
-        "id": "idle_ants",
-        "name": "Idle Ants",
-        "url": "https://classwork188.github.io/g5/idle-ants",
-        "image": "https://classwork188.github.io/img/idle-ants.png"
-    },
-    {
-        "id": "rooftop_snipers",
-        "name": "Rooftop Snipers",
-        "url": "https://classwork188.github.io/g/rooftop-snipers",
-        "image": "https://classwork188.github.io/img/rooftop-snipers.png"
-    },
-    {
-        "id": "blumgi_bloom",
-        "name": "Blumgi Bloom",
-        "url": "https://classwork188.github.io/g20/blumgi-bloom",
-        "image": "https://classwork188.github.io/img/blumgi-bloom.png"
-    },
-    {
-        "id": "james_gun",
-        "name": "James Gun",
-        "url": "https://classwork188.github.io/g177/james-gun",
-        "image": "https://classwork188.github.io/img/james-gun.png"
-    },
-    {
-        "id": "zeepkist_crash_d",
-        "name": "Zeepkist Crash 2D",
-        "url": "https://classwork188.github.io/g177/zeepkist-crash-2d",
-        "image": "https://classwork188.github.io/img/zeepkist-crash-2d.png"
-    },
-    {
-        "id": "light_the_lamp",
-        "name": "Light the Lamp",
-        "url": "https://classwork188.github.io/g20/light-the-lamp",
-        "image": "https://classwork188.github.io/img/light-the-lamp.png"
-    },
-    {
-        "id": "swingo",
-        "name": "Swingo",
-        "url": "https://classwork188.github.io/g3/swingo",
-        "image": "https://classwork188.github.io/img/swingo.png"
-    },
-    {
-        "id": "big_shot_boxing",
-        "name": "Big Shot Boxing",
-        "url": "https://classwork188.github.io/g2/big-shot-boxing",
-        "image": "https://classwork188.github.io/img/big-shot-boxing.png"
-    },
-    {
-        "id": "slime_laboratory",
-        "name": "Slime Laboratory",
-        "url": "https://classwork188.github.io/g177/slime-laboratory",
-        "image": "https://classwork188.github.io/img/slime-laboratory.png"
-    },
-    {
-        "id": "blumgi_ball",
-        "name": "Blumgi Ball",
-        "url": "https://classwork188.github.io/g2/blumgi-ball",
-        "image": "https://classwork188.github.io/img/blumgi-ball.png"
-    },
-    {
-        "id": "make_it_meme",
-        "name": "Make it Meme",
-        "url": "https://classwork188.github.io/g177/make-it-meme",
-        "image": "https://classwork188.github.io/img/make-it-meme.png"
-    },
-    {
-        "id": "growmi",
-        "name": "Growmi",
-        "url": "https://classwork188.github.io/g20/growmi",
-        "image": "https://classwork188.github.io/img/growmi.png"
-    },
-    {
-        "id": "flip_bros",
-        "name": "Flip Bros",
-        "url": "https://classwork188.github.io/g177/flip-bros",
-        "image": "https://classwork188.github.io/img/flip-bros.png"
-    },
-    {
-        "id": "rocket_soccer_derby",
-        "name": "Rocket Soccer Derby",
-        "url": "https://classwork188.github.io/g6/rocket-soccer-derby",
-        "image": "https://classwork188.github.io/img/rocket-soccer-derby.png"
-    },
-    {
-        "id": "car_drift_racers_2",
-        "name": "Car Drift Racers 2",
-        "url": "https://classwork188.github.io/g72/car-drift-racers-2",
-        "image": "https://classwork188.github.io/img/car-drift-racers-2.png"
-    },
-    // {
-    //   "id": "1v1lol",
-    //   "name": "1v1-lol",
-    //   "url": "https://classwork188.github.io/g77/1v1-lol-3",
-    //   "image": "https://classwork188.github.io/img/1v1-lol.png"
-    // },
-    {
-        "id": "a_pretty_odd_bunny",
-        "name": "A Pretty Odd Bunny",
-        "url": "https://classwork188.github.io/g16/a-pretty-odd-bunny",
-        "image": "https://classwork188.github.io/img/a-pretty-odd-bunny.png"
-    },
-    {
-        "id": "city_car_driving_stunt_master",
-        "name": "City Car Driving: Stunt Master",
-        "url": "https://classwork188.github.io/g4/city-car-driving-stunt-master",
-        "image": "https://classwork188.github.io/img/city-car-driving-stunt-master.png"
-    },
-    {
-        "id": "sling_drift",
-        "name": "Sling Drift",
-        "url": "https://classwork188.github.io/g26/sling-drift",
-        "image": "https://classwork188.github.io/img/sling-drift.png"
-    },
-    {
-        "id": "minecraft_builder",
-        "name": "Minecraft Builder",
-        "url": "https://classwork188.github.io/g7/minecraft-builder",
-        "image": "https://classwork188.github.io/img/minecraft-builder.png"
-    },
-    {
-        "id": "level_devil",
-        "name": "Level Devil",
-        "url": "https://classwork188.github.io/g177/level-devil",
-        "image": "https://classwork188.github.io/img/level-devil.png"
-    },
-    {
-        "id": "super_mario_bros",
-        "name": "Super Mario Bros",
-        "url": "https://classwork188.github.io/g9/super-mario-bros",
-        "image": "https://classwork188.github.io/img/super-mario-bros.png"
-    },
-    {
-        "id": "kix_dream_soccer",
-        "name": "KiX Dream Soccer",
-        "url": "https://classwork188.github.io/g5/kix-dream-soccer",
-        "image": "https://classwork188.github.io/img/kix-dream-soccer.png"
-    },
-    // {
-    //   "id": "paper_io_2",
-    //   "name": "paper-io-2",
-    //   "url": "https://classwork188.github.io/g9/paper-io-2",
-    //   "image": "https://classwork188.github.io/img/paper-io-2.png"
-    // },
-    {
-        "id": "blocky_cars",
-        "name": "Blocky Cars",
-        "url": "https://classwork188.github.io/g2/blocky-cars",
-        "image": "https://classwork188.github.io/img/blocky-cars.png"
-    },
-    {
-        "id": "shootz",
-        "name": "ShootZ",
-        "url": "https://classwork188.github.io/g177/shootz",
-        "image": "https://classwork188.github.io/img/shootz.png"
-    },
-    {
-        "id": "tiger_simulator_3d",
-        "name": "Tiger Simulator 3D",
-        "url": "https://classwork188.github.io/g3/tiger-simulator-3d",
-        "image": "https://classwork188.github.io/img/tiger-simulator-3d.png"
-    },
-    {
-        "id": "red_ball_4",
-        "name": "Red Ball 4",
-        "url": "https://classwork188.github.io/g177/red-ball-4",
-        "image": "https://classwork188.github.io/img/red-ball-4.png"
-    },
-    {
-        "id": "blumgi_rocket",
-        "name": "Blumgi Rocket",
-        "url": "https://classwork188.github.io/g2/blumgi-rocket",
-        "image": "https://classwork188.github.io/img/blumgi-rocket.png"
-    },
-    {
-        "id": "masked_forces",
-        "name": "Masked Forces",
-        "url": "https://classwork188.github.io/g8/masked-forces",
-        "image": "https://classwork188.github.io/img/masked-forces.png"
-    },
-    {
-        "id": "stick_merge",
-        "name": "Stick Merge",
-        "url": "https://classwork188.github.io/g3/stick-merge",
-        "image": "https://classwork188.github.io/img/stick-merge.png"
-    },
-    // {
-    //   "id": "we_become_what_we_behold",
-    //   "name": "We Become What We Behold",
-    //   "url": "https://classwork188.github.io/g3/we-become-what-we-behold",
-    //   "image": "https://classwork188.github.io/img/we-become-what-we-behold.png"
-    // },
-    {
-        "id": "brain_test_tricky_puzzles",
-        "name": "Brain Test: Tricky Puzzles",
-        "url": "https://classwork188.github.io/g2/brain-test-tricky-puzzles",
-        "image": "https://classwork188.github.io/img/brain-test-tricky-puzzles.png"
-    },
-    {
-        "id": "gobble",
-        "name": "Gobble",
-        "url": "https://classwork188.github.io/g4/gobble",
-        "image": "https://classwork188.github.io/img/gobble.png"
-    },
-    {
-        "id": "boxing_physics_2",
-        "name": "Boxing Physics 2",
-        "url": "https://classwork188.github.io/g2/boxing-physics-2",
-        "image": "https://classwork188.github.io/img/boxing-physics-2.png"
-    },
-    {
-        "id": "subway_surfers_newyork",
-        "name": "Subway Surfers: New York",
-        "url": "https://classwork188.github.io/g8/subway-surfers-newyork",
-        "image": "https://classwork188.github.io/img/subway-surfers-newyork.png"
-    },
-    {
-        "id": "stair_race_3d",
-        "name": "Stair Race 3D",
-        "url": "https://classwork188.github.io/g6/stair-race-3d",
-        "image": "https://classwork188.github.io/img/stair-race-3d.png"
-    },
-    {
-        "id": "moto_road_rash_d",
-        "name": "Moto Road Rash 3D",
-        "url": "https://classwork188.github.io/g7/moto-road-rash-3d",
-        "image": "https://classwork188.github.io/img/moto-road-rash-3d.png"
-    },
-    {
         "id": "doom2",
         "name": "DOOM 2",
         "url": "https://msdos-games.com/game/?prn=doom2",
         "image": "https://icons.iconarchive.com/icons/3xhumed/mega-games-pack-26/256/Doom-II-2-icon.png"
-    },
-    {
-        "id": "super_star_car",
-        "name": "Super Star Car",
-        "url": "https://classwork188.github.io/g3/super-star-car",
-        "image": "https://classwork188.github.io/img/super-star-car.png"
-    },
-    // {
-    //   "id": "peppa_pig_basketball",
-    //   "name": "peppa-pig-basketball",
-    //   "url": "https://classwork188.github.io/g72/peppa-pig-basketball",
-    //   "image": "https://classwork188.github.io/img/peppa-pig-basketball.png"
-    // },
-    {
-        "id": "poor_bunny",
-        "name": "Poor Bunny",
-        "url": "https://classwork188.github.io/g6/poor-bunny",
-        "image": "https://classwork188.github.io/img/poor-bunny.png"
-    },
-    {
-        "id": "fnf_shaggy_matt",
-        "name": "Friday Night Funkin' VS. Shaggy x Matt",
-        "url": "https://classwork188.github.io/fnf3/fnf-shaggy-matt",
-        "image": "https://classwork188.github.io/img/fnf-shaggy-matt.png"
-    },
-    {
-        "id": "ping_pong_chaos",
-        "name": "Ping Pong Chaos",
-        "url": "https://classwork188.github.io/g16/ping-pong-chaos",
-        "image": "https://classwork188.github.io/img/ping-pong-chaos.png"
-    },
-    {
-        "id": "tunnel_rush",
-        "name": "Tunnel Rush Zero",
-        "url": "https://classwork188.github.io/g/tunnel-rush",
-        "image": "https://classwork188.github.io/img/tunnel-rush.png"
-    },
-    {
-        "id": "master_chess",
-        "name": "Master Chess",
-        "url": "https://classwork188.github.io/g7/master-chess",
-        "image": "https://classwork188.github.io/img/master-chess.png"
-    },
-    {
-        "id": "sling_kong",
-        "name": "Sling Kong",
-        "url": "https://classwork188.github.io/g16/sling-kong",
-        "image": "https://classwork188.github.io/img/sling-kong.png"
-    },
-    {
-        "id": "chicken_merge",
-        "name": "Chicken Merge",
-        "url": "https://classwork188.github.io/g4/chicken-merge",
-        "image": "https://classwork188.github.io/img/chicken-merge.png"
-    },
-    {
-        "id": "run_editor",
-        "name": "Run 3 Remastered",
-        "url": "https://classwork188.github.io/g9/run-3-editor",
-        "image": "https://classwork188.github.io/img/run-3-editor.png"
-    },
-    {
-        "id": "g_switch_3",
-        "name": "G-Switch 3",
-        "url": "https://classwork188.github.io/g4/g-switch-3",
-        "image": "https://classwork188.github.io/img/g-switch-3.png"
-    },
-    {
-        "id": "soccer_skills_world_cup",
-        "name": "Soccer Skills: World Cup",
-        "url": "https://classwork188.github.io/g6/soccer-skills-world-cup",
-        "image": "https://classwork188.github.io/img/soccer-skills-world-cup.png"
-    },
-    {
-        "id": "dreadhead_parkour",
-        "name": "Dreadhead Parkour",
-        "url": "https://classwork188.github.io/g7/dreadhead-parkour",
-        "image": "https://classwork188.github.io/img/dreadhead-parkour.png"
-    },
-    {
-        "id": "tag",
-        "name": "Tag",
-        "url": "https://classwork188.github.io/g3/tag",
-        "image": "https://classwork188.github.io/img/tag.png"
-    },
-    {
-        "id": "tank_ball_monster_battle",
-        "name": "Tank Ball: Monster Battle",
-        "url": "https://classwork188.github.io/g69/tank-ball-monster-battle",
-        "image": "https://classwork188.github.io/img/tank-ball-monster-battle.png"
-    },
-    {
-        "id": "stack_ball",
-        "name": "Stack Ball",
-        "url": "https://classwork188.github.io/g9/stack-ball",
-        "image": "https://classwork188.github.io/img/stack-ball.png"
-    },
-    {
-        "id": "super_liquid_soccer",
-        "name": "Super Liquid Soccer",
-        "url": "https://classwork188.github.io/g3/super-liquid-soccer",
-        "image": "https://classwork188.github.io/img/super-liquid-soccer.png"
-    },
-    {
-        "id": "monkey_mart",
-        "name": "Monkey Mart",
-        "url": "https://classwork188.github.io/g8/monkey-mart",
-        "image": "https://classwork188.github.io/img/monkey-mart.png"
-    },
-    {
-        "id": "hopwarp",
-        "name": "Hop Warp",
-        "image": "https://classwork188.github.io/img/hop-warp.png",
-        "url": "https://classwork188.github.io/g20/hop-warp/"
     },
 ];
