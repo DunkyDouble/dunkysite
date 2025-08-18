@@ -574,18 +574,18 @@ export default [
     //     "image": libHost + "/files/drift-boss.png",
     //     "url": libHost + "/files/DriftBoss.html",
     // },
-    {
-        "id": "osu",
-        "name": "osu!",
-        "url": "https://webosu.online/",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Osu%21_Logo_2016.svg/1200px-Osu%21_Logo_2016.svg.png"
-    },
-    {
-        "id": "osumania",
-        "name": "osu!mania",
-        "url": "https://webosumania.com/",
-        "image": "https://pm1.aminoapps.com/7716/28302f8ea60e2c43e9c905acf47a527cf928265fr1-500-500v2_00.jpg"
-    },
+    // { // catboy.best isnt available sometimes, need to make my own proxy but port forwarding + public repo is an issue
+    //     "id": "osu",
+    //     "name": "osu!",
+    //     "url": "https://webosu.online/",
+    //     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Osu%21_Logo_2016.svg/1200px-Osu%21_Logo_2016.svg.png"
+    // },
+    // {
+    //     "id": "osumania",
+    //     "name": "osu!mania",
+    //     "url": "https://webosumania.com/",
+    //     "image": "https://pm1.aminoapps.com/7716/28302f8ea60e2c43e9c905acf47a527cf928265fr1-500-500v2_00.jpg"
+    // },
     {
         "id": "cuttherope",
         "name": "Cut the Rope",
