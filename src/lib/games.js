@@ -691,7 +691,7 @@ export default [
     {
         "id": "rocketsoccerderby",
         "name": "Rocket Soccer Derby",
-        "url": libHost + "/files/rocketsoccerderby",
+        "url": libHost + "/files/rocketsoccerderby/index.html",
         "image": libHost + "/files/rocketsoccer.png",
     },
     {
