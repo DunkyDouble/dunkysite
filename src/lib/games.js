@@ -213,6 +213,12 @@ export default [
         "url": libHost + "/files/parkourblock4/index.html"
     },
     {
+        "id": "parkourblock5",
+        "name": "Parkour Block 5",
+        "image": libHost + "/files/parkour-block-5-m250x250.webp",
+        "url": libHost + "/files/parkourblock5real/index.html"
+    },
+    {
         "id": "parkourblockwinter",
         "name": "Parkour Block: Christmas",
         "image": libHost + "/files/parkour-block-xmas-special.avif",
@@ -681,6 +687,12 @@ export default [
         name: 'Little Alchemy',
         url: 'https://littlealchemy.com',
         image: libHost + "/files/little-alchemy.png",
+    },
+    {
+        "id": "rocketsoccerderby",
+        "name": "Rocket Soccer Derby",
+        "url": libHost + "/files/rocketsoccerderby",
+        "image": libHost + "/files/rocketsoccer.png",
     },
     {
         id: 'templerun2',
