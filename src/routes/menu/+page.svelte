@@ -56,6 +56,12 @@
 			}
 		}
 	};
+	const onOpenTabCountChanged = (event) => {
+		// TODO: make it so updating tab count limits it
+		const realCount = Math.max(1, Math.min(10, Math.round(event.target.value)));
+		event.target.value = realCount;
+		$Settings.openTabCount = realCount;
+	};
 </script>
 
 {#if SiteState.beta}
@@ -135,20 +141,54 @@
 			</p>
 			<GamesComponent search={options.search} apps={options.activeTab === 'apps'} newTab={options.newTab} />
 		{:else if options.activeTab === 'settings'}
-			<p class="setting">
-                <span><label>
+			<div class="setting setting-right">
+                <div><label>
+                    Tab Disguise
+					<div>
+                    	<input
+							type="range"
+							min="0"
+							max="1"
+							step="0.0000001"
+							bind:value={$Settings.tabDisguiseIntensity}
+						/>
+						<div class="setting-percent"><em>
+							{Math.round($Settings.tabDisguiseIntensity * 100)}%
+						</em></div>
+					</div>
+                </label></div>
+                <span>Adjust the intensity to try and hide your tab. This will cover your game with a document and make the game transparent.</span>
+            </div>
+			<div class="setting setting-right">
+                <div><label>
+                    How many tabs to open?
+					<div>
+                    	<input
+							type="number"
+							min="1"
+							max="10"
+							step="1"
+							value={$Settings.openTabCount}
+							oninput={onOpenTabCountChanged}
+						/>
+					</div>
+                </label></div>
+                <span>Change this number to open more than 1 tab. Each extra tab will show a button to load the game.</span>
+            </div>
+			<div class="setting">
+                <div><label>
                     <input type="checkbox" bind:checked={$Settings.showAllGamesNeeded}>
                     Hide too many games behind a button on startup
-                </label></span>
+                </label></div>
                 <span>Only shows a few games in the list when you first open the website, useful if your computer starts lagging immediately.</span>
-            </p>
-			<p class="setting">
-                <span><label>
+            </div>
+			<div class="setting">
+                <div><label>
                     <input type="checkbox" bind:checked={$Settings.showDebugMenu}>
                     Show Developer menus
-                </label></span>
+                </label></div>
                 <span>Adds small information to some menus and elements. Not useful for normal users.</span>
-            </p>
+            </div>
             <a target="_blank" href="/terms">Terms of Service</a>
             <a target="_blank" href="/privacy">Privacy Policy</a>
             <p>
@@ -298,13 +338,18 @@
 	}
 
     .setting {
+		display: block;
         width: 60%;
+    	margin-block-start: 1em;
+    	margin-block-end: 1em;
     }
-    .setting > span:nth-child(1) {
+    .setting > span:nth-child(1),
+    .setting > div:nth-child(1) {
         display: block;
         height: 2em;
     }
-    .setting > span:nth-child(1) label {
+    .setting > span:nth-child(1) label,
+    .setting > div:nth-child(1) label {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -314,6 +359,10 @@
         
         cursor: pointer;
     }
+	.setting-right > span:nth-child(1) label,
+	.setting-right > div:nth-child(1) label {
+        justify-content: space-between;
+	}
     .setting label input[type="checkbox"] {
         width : 1.5em;
         height: 1.5em;
@@ -323,4 +372,8 @@
         font-style: italic;
         opacity: 0.75;
     }
+	.setting-percent {
+		width: 3em;
+		display: inline-block;
+	}
 </style>
