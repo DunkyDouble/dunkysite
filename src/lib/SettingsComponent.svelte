@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
     
+	import GamesTab from '$lib/gamesTab.js';
     import SiteState from '$lib/site-state.svelte.js';
     import Settings from '$lib/stores/settings.js';
 
@@ -15,6 +16,11 @@
 			case 'unittest': {
 				const gameTab = new GamesTab();
 				gameTab.open(`${window.origin}/secret/unittest`);
+				break;
+			}
+			case 'resetonboarding': {
+				const gameTab = new GamesTab();
+				gameTab.open(`${window.origin}/secret/resetonboarding`);
 				break;
 			}
 			case 'test': {
@@ -32,6 +38,7 @@
 	};
 </script>
 
+<p>Your username is: <span class="green"><i>{$Settings.username}</i></span></p>
 <div class="setting setting-right">
     <div><label>
         Tab Disguise
@@ -102,9 +109,20 @@
     Thanks to 3kh0, gn-math, genizy, scheng123321, unxa, udbsite, 98corbins, burnedpopcorn, irv77, bubbls,
     reunbozdo, Irusso, FreeSwfGames, unxw, irv77, GalacticNetwork for creating huge libraries of assets and game ports
 </p>
-<input class="secret-bar" type="text" placeholder="Coder Debug..." bind:value={secretValue} onchange={onSecretChanged} />
+<input
+    class="secret-bar"
+    type="text"
+    placeholder="Coder Debug..."
+    bind:value={secretValue}
+    onchange={onSecretChanged}
+/>
 
 <style>
+	:global(a),
+    .green {
+		color: rgb(0, 255, 136);
+	}
+
 	.secret-bar,
     .setting input[type="text"],
     .setting input[type="number"] {
