@@ -1,7 +1,7 @@
 <script>
 	import GamesTab from '$lib/gamesTab.js';
     import Unavailable from '$lib/unavailable.js';
-    import SiteState from '$lib/site-state.svelte.js';
+    import SiteState from '$lib/state/site.svelte.js';
     import Settings from '$lib/stores/settings.js';
 
 	import gamesList from '$lib/games.js';
