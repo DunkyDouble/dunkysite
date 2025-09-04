@@ -622,12 +622,6 @@ export default [
     //     "image": "https://play-lh.googleusercontent.com/LLEUf9Qcd6N2L4nynBArv7wHyvPLiKBJtXjFEfgD4yS80ZJtQREVjIJE_HXFRDAJxQ",
     //     "url": libHost + "/files/anyflash.html?g=bloons-tower-defense-5"
     // },
-    // {
-    //   id: 'plantsvszombies',
-    //   name: 'Plants vs Zombies',
-    //   url: libHost + "/files/anyflash.html?g=pvz/pvz_9_15",
-    //   image: 'https://archive.org/download/plants-vs.-zombies-web-version-swf-content-20210226-t-143211-z-001/1_PCFlash_1.jpg'
-    // },
     // { // play button shows nothing? so you cant play
     //     id: 'happywheels',
     //     name: 'Happy Wheels',
@@ -640,6 +634,12 @@ export default [
     //   url: 'https://art-class.github.io/assets/motox3m',
     //   image: 'https://play-lh.googleusercontent.com/AbQMuT4ncBfWDqNF-4ubmfaRag59nrW3fJARDsHK51_PENScmWCnMFeQX81wfPlfGBo'
     // },
+    {
+        "id": "plants_vs_zombies",
+        "name": "Plants vs Zombies",
+        "url": libHost + "/files/pvz/index.html",
+        "image": libHost + "/files/site-gnm/covers/232.png",
+    },
     {
         id: 'thefinalearth',
         name: 'The Final Earth',
@@ -1962,12 +1962,6 @@ export default [
     //     "url": libHost + "/files/site-gnm/html/217.html",
     //     "image": libHost + "/files/site-gnm/covers/217.png",
     // },
-    {
-        "id": "gmmath_plants_vs_zombies",
-        "name": "Plants vs Zombies",
-        "url": libHost + "/files/pvz/index.html",
-        "image": libHost + "/files/site-gnm/covers/232.png",
-    },
     {
         "id": "gmmath_superhot",
         "name": "Superhot",
