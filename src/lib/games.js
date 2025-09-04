@@ -1965,7 +1965,7 @@ export default [
     {
         "id": "gmmath_plants_vs_zombies",
         "name": "Plants vs Zombies",
-        "url": libHost + "/files/site-gnm/html/232.html",
+        "url": libHost + "/files/pvz/index.html",
         "image": libHost + "/files/site-gnm/covers/232.png",
     },
     {
