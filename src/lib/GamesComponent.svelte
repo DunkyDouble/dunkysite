@@ -1,5 +1,5 @@
 <script>
-	import GamesTab from '$lib/gamesTab.js';
+	import GamesTab from '$lib/gamesTab.svelte.js';
     import Unavailable from '$lib/unavailable.js';
     import SiteState from '$lib/state/site.svelte.js';
     import Settings from '$lib/stores/settings.js';

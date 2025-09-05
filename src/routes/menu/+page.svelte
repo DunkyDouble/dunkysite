@@ -5,7 +5,7 @@
 	import BlogComponent from '$lib/BlogComponent.svelte';
 	import SettingsComponent from '$lib/SettingsComponent.svelte';
 
-	import GamesTab from '$lib/gamesTab.js';
+	import GamesTab from '$lib/gamesTab.svelte.js';
     import SiteState from '$lib/state/site.svelte.js';
     import Settings from '$lib/stores/settings.js';
 

@@ -1,5 +1,5 @@
 <script>
-	import GamesTab from '$lib/gamesTab.js';
+	import GamesTab from '$lib/gamesTab.svelte.js';
 
 	const openGameTab = () => {
 		const tab = new GamesTab("forcelogin");

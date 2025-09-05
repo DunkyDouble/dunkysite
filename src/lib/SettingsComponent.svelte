@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
     
-	import GamesTab from '$lib/gamesTab.js';
+	import GamesTab from '$lib/gamesTab.svelte.js';
     import SiteState from '$lib/state/site.svelte.js';
     import Settings from '$lib/stores/settings.js';
 
@@ -93,7 +93,6 @@
     <span>
         Connect to a custom server for specific games.
         If you want to add this, contact me to set this up for you.
-        For developers, add a hostname with port 19136 open.
     </span>
 </div>
 <div class="setting">
@@ -109,6 +108,8 @@
     Thanks to 3kh0, gn-math, genizy, scheng123321, unxa, udbsite, 98corbins, burnedpopcorn, irv77, bubbls,
     reunbozdo, Irusso, FreeSwfGames, unxw, irv77, GalacticNetwork for creating huge libraries of assets and game ports
 </p>
+<div style="display:block;margin-top:2em"></div>
+
 <input
     class="secret-bar"
     type="text"
@@ -126,23 +127,27 @@
 	.secret-bar,
     .setting input[type="text"],
     .setting input[type="number"] {
+		padding: 4px;
+
 		border: 1px solid white;
 		background: rgba(255, 255, 255, 0.1);
 		color: white;
-		padding: 4px;
 		border-radius: 4px;
 	}
 	.secret-bar {
-		position: absolute;
+		position: fixed;
 		right: 4px;
 		bottom: 4px;
+
+		z-index: 50;
 	}
     
     .setting {
-		display: block;
         width: 60%;
     	margin-block-start: 1em;
     	margin-block-end: 1em;
+
+		display: block;
     }
     .setting > span:nth-child(1),
     .setting > div:nth-child(1) {
@@ -175,6 +180,7 @@
     }
 	.setting-percent {
 		width: 3em;
+		
 		display: inline-block;
 	}
 </style>

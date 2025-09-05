@@ -1,3 +1,5 @@
+import Settings from '$lib/stores/settings.js';
+
 const windowNames = {
     docs: 'Google Docs',
     slides: 'Google Slides',
