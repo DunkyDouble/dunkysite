@@ -69,12 +69,16 @@ const pickRandomArray = (array) => {
 };
 
 class GamesTab {
-    constructor(username) {
+    constructor(windowType) {
         /**
          * @type {Window} The window of this tab if it exists.
          */
         this.window = null;
-        this.username = username;
+
+        /**
+         * @type {"generic"|"menu"|"dunkygame"}
+         */
+        this.windowType = windowType || "generic";
     }
     /**
      * Opens the games tab if it is not already open.
@@ -99,11 +103,15 @@ class GamesTab {
         iframe.style.top = "0px";
         iframe.style.width = "100%";
         iframe.style.height = "100%";
-        if (!url) {
+        if (this.windowType === "menu") {
             const menuUrl = new URL(window.origin);
             menuUrl.pathname = `/menu`;
-            menuUrl.search = `?name=${this.username}`;
             iframe.src = menuUrl;
+        } else if (this.windowType === "dunkygame") {
+            const gameUrl = new URL(gameUrl);
+            gameUrl.searchParams.set("dunky-username", $Settings.username);
+            gameUrl.searchParams.set("dunky-server", $Settings.externalServer);
+            iframe.src = gameUrl;
         } else {
             iframe.src = url;
         }

@@ -7,24 +7,21 @@
 
     let secretValue = $state("");
 	const onSecretChanged = () => {
+		const gameTab = new GamesTab();
 		switch (secretValue) {
 			case 'anything': {
-				const gameTab = new GamesTab();
 				gameTab.open(`${window.origin}/secret`);
 				break;
 			}
 			case 'unittest': {
-				const gameTab = new GamesTab();
 				gameTab.open(`${window.origin}/secret/unittest`);
 				break;
 			}
 			case 'resetonboarding': {
-				const gameTab = new GamesTab();
 				gameTab.open(`${window.origin}/secret/resetonboarding`);
 				break;
 			}
 			case 'test': {
-				const gameTab = new GamesTab();
 				gameTab.open(`${window.origin}/secret/test`);
 				break;
 			}
