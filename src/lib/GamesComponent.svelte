@@ -26,16 +26,18 @@
         showAllGamesShow = (fullList.length > showAllGamesLength) && showAllGamesNeeded && !showAllGames;
     });
 
-	const openGame = (url) => {
+	const openGame = (game) => {
+		let url = game.url;
 		if (url.startsWith('/')) {
 			url = String(`${window.origin}/${url}`);
 		}
+		const gameTab = new GamesTab(game.fromDunky ? "gamedunky" : "game");
+		const gameUrl = gameTab.makeUrl(url);
 		if (!props.newTab) {
-			window.location.href = url;
+			window.location.href = gameUrl;
 			return;
 		}
-		const gameTab = new GamesTab();
-		gameTab.open(url);
+		gameTab.open(gameUrl);
 	};
 	const showGames = () => {
 		showAllGames = true;
@@ -58,7 +60,7 @@
 {/if}
 <div class="games-list">
 	{#each SiteState.shownGames as game}
-		<button class="game" onclick={() => openGame(game.url)} data-id={game.id}>
+		<button class="game" onclick={() => openGame(game)} data-id={game.id}>
 			<img class="game-icon" alt="GameIcon" src={game.image} draggable="false" loading="lazy" />
 			<p class="game-name">{game.name}</p>
 

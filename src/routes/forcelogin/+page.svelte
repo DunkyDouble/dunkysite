@@ -3,7 +3,8 @@
 
 	const openGameTab = () => {
 		const tab = new GamesTab("menu");
-		tab.open();
+		const url = tab.makeUrl();
+		tab.open(url);
 	};
 </script>
 

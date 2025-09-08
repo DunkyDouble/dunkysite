@@ -1,3 +1,5 @@
+import * as stores from 'svelte/store';
+
 import Settings from '$lib/stores/settings.js';
 
 const windowNames = {
@@ -69,16 +71,38 @@ const pickRandomArray = (array) => {
 };
 
 class GamesTab {
-    constructor(windowType) {
+    /**
+     * Makes a hidden tab using about:blank
+     * @param {"generic"|"menu"|"game"|"gamedunky"}} windowType 
+     */
+    constructor(windowType = "generic") {
         /**
          * @type {Window} The window of this tab if it exists.
          */
         this.window = null;
 
         /**
-         * @type {"generic"|"menu"|"dunkygame"}
+         * @type {"generic"|"menu"|"game"|"gamedunky"}
          */
-        this.windowType = windowType || "generic";
+        this.windowType = windowType;
+    }
+    /**
+     * Makes or edits a URL based on the specified windowType
+     * @param {string?} url The target URL, if needed.
+     */
+    makeUrl(url) {
+        const settings = stores.get(Settings);
+        if (this.windowType === "menu") {
+            const menuUrl = new URL(window.origin);
+            menuUrl.pathname = `/menu`;
+            return menuUrl;
+        } else if (this.windowType === "gamedunky") {
+            const gameUrl = new URL(gameUrl);
+            gameUrl.searchParams.set("dunky-username", settings.username);
+            gameUrl.searchParams.set("dunky-server", settings.externalServer);
+            return gameUrl;
+        }
+        return url;
     }
     /**
      * Opens the games tab if it is not already open.
@@ -88,6 +112,7 @@ class GamesTab {
         if (this.window) return this.window;
         this.window = window.open();
         // fill out info
+        const settings = stores.get(Settings);
         // generate title
         const application = pickRandomArray(Object.keys(windowNames));
         const applicationName = windowNames[application];
@@ -103,18 +128,7 @@ class GamesTab {
         iframe.style.top = "0px";
         iframe.style.width = "100%";
         iframe.style.height = "100%";
-        if (this.windowType === "menu") {
-            const menuUrl = new URL(window.origin);
-            menuUrl.pathname = `/menu`;
-            iframe.src = menuUrl;
-        } else if (this.windowType === "dunkygame") {
-            const gameUrl = new URL(gameUrl);
-            gameUrl.searchParams.set("dunky-username", $Settings.username);
-            gameUrl.searchParams.set("dunky-server", $Settings.externalServer);
-            iframe.src = gameUrl;
-        } else {
-            iframe.src = url;
-        }
+        iframe.src = url;
         this.window.document.body.appendChild(iframe);
         return this.window;
     }
