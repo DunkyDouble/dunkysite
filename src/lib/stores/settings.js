@@ -7,6 +7,7 @@ const defaultSettings = {
     showDebugMenu: false,
     showAllGamesNeeded: false,
     openTabCount: 1,
+    openTabCountConfirmPopup: false,
     tabDisguiseIntensity: 0,
     externalServer: "",
 };

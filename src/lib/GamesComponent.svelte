@@ -26,18 +26,37 @@
         showAllGamesShow = (fullList.length > showAllGamesLength) && showAllGamesNeeded && !showAllGames;
     });
 
-	const openGame = (game) => {
-		let url = game.url;
-		if (url.startsWith('/')) {
-			url = String(`${window.origin}/${url}`);
+	const openGame = async (game) => {
+		// block if needs a setting
+		if (game.requiresExternalServer && !$Settings.externalServer) {
+			return await alert("This game requires the \"Custom Server\" setting."
+				+ " Please ask the provider for the Custom Server.");
 		}
+		// if they want more tabs, confirm that they have enabled popups or will have to
+		if ($Settings.openTabCount > 1 && !$Settings.openTabCountConfirmPopup) {
+			await alert("Google Chrome will block more than 1 tab by default."
+			+ " You may have to come back to this tab to enable pop-ups, then more tabs will appear.");
+			$Settings.openTabCountConfirmPopup = true;
+		}
+		
+		// open the first tab
 		const gameTab = new GamesTab(game.fromDunky ? "gamedunky" : "game");
-		const gameUrl = gameTab.makeUrl(url);
+		const gameUrl = gameTab.makeUrl(game.url);
 		if (!props.newTab) {
 			window.location.href = gameUrl;
 			return;
 		}
 		gameTab.open(gameUrl);
+
+		// if more tabs should open, open those extra tabs with a button
+		if ($Settings.openTabCount > 1) {
+			const extraTabCount = Math.max(1, $Settings.openTabCount - 1);
+			for (let i = 0; i < extraTabCount; i++) {
+				const gameTab = new GamesTab(game.fromDunky ? "gamedunky" : "game");
+				const gameUrl = gameTab.makeUrl(game.url);
+				gameTab.open(gameUrl, true);
+			}
+		}
 	};
 	const showGames = () => {
 		showAllGames = true;

@@ -68,7 +68,10 @@
 			/>
 		</div>
     </label></div>
-    <span>Change this number to open more than 1 tab. Each extra tab will show a button to load the game.</span>
+    <span>
+		Change this number to open more than 1 tab. Each extra tab will show a button to load the game.
+		Google Chrome might block extra tabs from showing up, make sure to allow pop-ups in the site settings.
+	</span>
 </div>
 <div class="setting">
     <div><label>

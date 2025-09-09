@@ -8,8 +8,13 @@
         $Settings.usernameSetup = false;
         currentMessage = `Reset usernameSetup (${Date.now()})`;
     };
+    const resetOpenTabCountConfirmPopup = () => {
+        $Settings.openTabCountConfirmPopup = false;
+        currentMessage = `Reset openTabCountConfirmPopup (${Date.now()})`;
+    };
 </script>
 
 <p>resetonboarding</p>
 <p>{currentMessage}</p>
 <button onclick={resetUsernameSetup}>Reset usernameSetup</button>
+<button onclick={resetOpenTabCountConfirmPopup}>Reset openTabCountConfirmPopup</button>
