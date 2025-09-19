@@ -71,7 +71,7 @@ export default [
     {
         "id": "peopleplayground",
         "name": "People Playground",
-        "image": libHost + "/files/PeoplePlayground194.png",
+        "image": libHost + "/files/peopleplaygroundimage.png",
         "url": libHost + "/files/PeoplePlayground.html"
     },
     {
@@ -871,8 +871,32 @@ export default [
     {
         id: 'pokemonemerald',
         name: 'Pokemon Emerald',
-        url: "https://mkgamesdev.github.io/MKGBA2.0/launcher.html#pokemonemerald",
-        image: libHost + "/files/pkem.jpg",
+        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmemerald.gba",
+        image: libHost + "/files/pkmcoveremerald.jpg",
+    },
+    {
+        id: 'pokemonruby',
+        name: 'Pokemon Ruby',
+        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmruby.gba",
+        image: libHost + "/files/pkmcoverruby.jpg",
+    },
+    {
+        id: 'pokemonsapphire',
+        name: 'Pokemon Sapphire',
+        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmsapphire.gba",
+        image: libHost + "/files/pkmcoversapphire.jpg",
+    },
+    {
+        id: 'pokemonfirered',
+        name: 'Pokemon FireRed',
+        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmfirered.gba",
+        image: libHost + "/files/pkmcoverfirered.jpg",
+    },
+    {
+        id: 'pokemonleafgreen',
+        name: 'Pokemon LeafGreen',
+        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmleafgreen.gba",
+        image: libHost + "/files/pkmcoverleafgreen.jpg",
     },
     {
         "id": "bitlife",
