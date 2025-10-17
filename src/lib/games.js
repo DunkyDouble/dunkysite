@@ -71,7 +71,7 @@ export default [
     {
         "id": "peopleplayground",
         "name": "People Playground",
-        "image": libHost + "/files/PeoplePlayground194.png",
+        "image": libHost + "/files/peopleplaygroundimage.png",
         "url": libHost + "/files/PeoplePlayground.html"
     },
     {
@@ -431,12 +431,6 @@ export default [
         "url": libHost + "/files/fireboywatergirl/content/www.coolmathgames.com/fireboy-watergirl-5/index.html"
     },
     {
-        "id": "supermarioworld",
-        "name": "Super Mario World",
-        "image": libHost + "/files/smw.png",
-        "url": "https://supernintendoemulator.com/game/?game=Super_Mario_World",
-    },
-    {
         "id": "supermario64",
         "name": "Super Mario 64",
         "image": "https://th.bing.com/th?id=OSK.78ceec6b6944a3fec185f5873159a469&w=188&h=132&c=7&o=6&pid=SANGAM",
@@ -622,12 +616,6 @@ export default [
     //     "image": "https://play-lh.googleusercontent.com/LLEUf9Qcd6N2L4nynBArv7wHyvPLiKBJtXjFEfgD4yS80ZJtQREVjIJE_HXFRDAJxQ",
     //     "url": libHost + "/files/anyflash.html?g=bloons-tower-defense-5"
     // },
-    // {
-    //   id: 'plantsvszombies',
-    //   name: 'Plants vs Zombies',
-    //   url: libHost + "/files/anyflash.html?g=pvz/pvz_9_15",
-    //   image: 'https://archive.org/download/plants-vs.-zombies-web-version-swf-content-20210226-t-143211-z-001/1_PCFlash_1.jpg'
-    // },
     // { // play button shows nothing? so you cant play
     //     id: 'happywheels',
     //     name: 'Happy Wheels',
@@ -640,6 +628,12 @@ export default [
     //   url: 'https://art-class.github.io/assets/motox3m',
     //   image: 'https://play-lh.googleusercontent.com/AbQMuT4ncBfWDqNF-4ubmfaRag59nrW3fJARDsHK51_PENScmWCnMFeQX81wfPlfGBo'
     // },
+    {
+        "id": "plants_vs_zombies",
+        "name": "Plants vs Zombies",
+        "url": libHost + "/files/pvz/index.html",
+        "image": libHost + "/files/site-gnm/covers/232.png",
+    },
     {
         id: 'thefinalearth',
         name: 'The Final Earth',
@@ -871,8 +865,92 @@ export default [
     {
         id: 'pokemonemerald',
         name: 'Pokemon Emerald',
-        url: "https://mkgamesdev.github.io/MKGBA2.0/launcher.html#pokemonemerald",
-        image: libHost + "/files/pkem.jpg",
+        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmemerald.gba",
+        image: libHost + "/files/pkmcoveremerald.jpg",
+    },
+    {
+        id: 'pokemonruby',
+        name: 'Pokemon Ruby',
+        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmruby.gba",
+        image: libHost + "/files/pkmcoverruby.jpg",
+    },
+    {
+        id: 'pokemonsapphire',
+        name: 'Pokemon Sapphire',
+        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmsapphire.gba",
+        image: libHost + "/files/pkmcoversapphire.jpg",
+    },
+    {
+        id: 'pokemonfirered',
+        name: 'Pokemon FireRed',
+        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmfirered.gba",
+        image: libHost + "/files/pkmcoverfirered.jpg",
+    },
+    {
+        id: 'pokemonleafgreen',
+        name: 'Pokemon LeafGreen',
+        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmleafgreen.gba",
+        image: libHost + "/files/pkmcoverleafgreen.jpg",
+    },
+    {
+        id: 'mario1',
+        name: 'Super Mario Bros.',
+        "url": libHost + "/files/anyrom.html?t=nes&g=roms/mario.nes",
+        image: "https://assets-prd.ignimgs.com/2022/01/08/smb-nesart-1641603921866.jpg"
+    },
+    {
+        id: 'mario2',
+        name: 'Super Mario Bros. 2',
+        "url": libHost + "/files/anyrom.html?t=nes&g=roms/mario2.nes",
+        image: "https://assets-prd.ignimgs.com/2022/01/05/smb2-1641344415440.jpg?crop=1%3A1%2Csmart&format=jpg"
+    },
+    {
+        id: 'mario3',
+        name: 'Super Mario Bros. 3',
+        "url": libHost + "/files/anyrom.html?t=nes&g=roms/mario3.nes",
+        image: "https://assets-prd.ignimgs.com/2021/12/08/smb3-1638922753441.jpg"
+    },
+    {
+        id: 'marioworld',
+        name: 'Super Mario World',
+        "url": libHost + "/files/anyrom.html?t=snes&g=roms/marioworld.sfc",
+        image: "https://cdn.mobygames.com/covers/4663678-super-mario-world-snes-front-cover.jpg"
+    },
+    {
+        id: 'marioyoshiisland',
+        name: 'Super Mario World 2: Yoshi\'s Island',
+        "url": libHost + "/files/anyrom.html?t=snes&g=roms/yoshiisland.sfc",
+        image: "https://d29xot63vimef3.cloudfront.net/image/misc-games/6835-1.jpg"
+    },
+    {
+        id: 'mariorpg',
+        name: 'Super Mario RPG',
+        "url": libHost + "/files/anyrom.html?t=snes&g=roms/mariorpg.sfc",
+        image: "https://assets-prd.ignimgs.com/2022/01/26/supermariorpg-sq-1643215850430.jpg?crop=1%3A1%2Csmart&format=jpg"
+    },
+    {
+        id: 'zeldanes',
+        name: 'Legend of Zelda NES',
+        "url": libHost + "/files/anyrom.html?t=nes&g=roms/zelda.nes",
+        image: "https://assets-prd.ignimgs.com/2021/12/07/zelda1-1638920697847.jpg?crop=1%3A1%2Csmart&format=jpg"
+    },
+    {
+        id: 'donkeykongcountry1',
+        name: 'Donkey Kong Country',
+        "url": libHost + "/files/anyrom.html?t=snes&g=roms/dkc.sfc",
+        image: "https://assets-prd.ignimgs.com/2025/02/15/dkcsnes-1739578170756.jpg?crop=1%3A1%2Csmart&format=jpg"
+    },
+    {
+        id: 'donkeykongcountry2',
+        name: 'Donkey Kong Country 2',
+        "url": libHost + "/files/anyrom.html?t=snes&g=roms/dkc2.sfc",
+        image: "https://assets-prd.ignimgs.com/2025/02/15/dkc2snes-1024-1739579018373.jpg?crop=1%3A1%2Csmart&format=jpg"
+    },
+    {
+        id: 'earthbound',
+        name: 'Earthbound',
+        "url": libHost + "/files/anyrom.html?t=snes&g=roms/earthbound.sfc",
+        image: "https://assets-prd.ignimgs.com/2021/12/10/earthbound-1639126130595.jpg?crop=1%3A1%2Csmart&format=jpg"
     },
     {
         "id": "bitlife",
@@ -1962,12 +2040,6 @@ export default [
     //     "url": libHost + "/files/site-gnm/html/217.html",
     //     "image": libHost + "/files/site-gnm/covers/217.png",
     // },
-    {
-        "id": "gmmath_plants_vs_zombies",
-        "name": "Plants vs Zombies",
-        "url": libHost + "/files/site-gnm/html/232.html",
-        "image": libHost + "/files/site-gnm/covers/232.png",
-    },
     {
         "id": "gmmath_superhot",
         "name": "Superhot",
