@@ -38,21 +38,21 @@
 <p>Your username is: <span class="green"><i>{$Settings.username}</i></span></p>
 <div class="setting setting-right">
     <div><label>
-        Tab Disguise
+        Reflection Disguise
 		<div>
         	<input
 				type="range"
 				min="0"
 				max="1"
 				step="0.0000001"
-				bind:value={$Settings.tabDisguiseIntensity}
+				bind:value={$Settings.reflectionDisguiseIntensity}
 			/>
 			<div class="setting-percent"><em>
-				{Math.round($Settings.tabDisguiseIntensity * 100)}%
+				{Math.round($Settings.reflectionDisguiseIntensity * 100)}%
 			</em></div>
 		</div>
     </label></div>
-    <span>Adjust the intensity to try and hide your tab. This will cover your game with a document and make the game transparent.</span>
+    <span>Adjust the intensity to make your screen more gray. This will hopefully reduce how much game colors reflect on your face.</span>
 </div>
 <div class="setting setting-right">
     <div><label>

@@ -8,7 +8,7 @@ const defaultSettings = {
     showAllGamesNeeded: false,
     openTabCount: 1,
     openTabCountConfirmPopup: false,
-    tabDisguiseIntensity: 0,
+    reflectionDisguiseIntensity: 0,
     externalServer: "",
 };
 
