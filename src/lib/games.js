@@ -865,32 +865,38 @@ export default [
     {
         id: 'pokemonemerald',
         name: 'Pokemon Emerald',
-        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmemerald.gba",
+        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmemerald.zip",
         image: libHost + "/files/pkmcoveremerald.jpg",
     },
     {
         id: 'pokemonruby',
         name: 'Pokemon Ruby',
-        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmruby.gba",
+        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmruby.zip",
         image: libHost + "/files/pkmcoverruby.jpg",
     },
     {
         id: 'pokemonsapphire',
         name: 'Pokemon Sapphire',
-        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmsapphire.gba",
+        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmsapphire.zip",
         image: libHost + "/files/pkmcoversapphire.jpg",
     },
     {
         id: 'pokemonfirered',
         name: 'Pokemon FireRed',
-        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmfirered.gba",
+        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmfirered.zip",
         image: libHost + "/files/pkmcoverfirered.jpg",
     },
     {
         id: 'pokemonleafgreen',
         name: 'Pokemon LeafGreen',
-        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmleafgreen.gba",
+        "url": libHost + "/files/anyrom.html?t=gba&g=roms/pkmleafgreen.zip",
         image: libHost + "/files/pkmcoverleafgreen.jpg",
+    },
+    {
+        id: 'kirbysuperstar',
+        name: 'Kirby Super Star',
+        "url": libHost + "/files/anyrom.html?t=snes&g=roms/kirbysuperstar.zip",
+        image: "https://assets-prd.ignimgs.com/2022/01/14/kirbysuperstar-sq-1642124252449.jpg?crop=1%3A1%2Csmart&format=jpg&auto=webp&quality=80"
     },
     {
         id: 'mario1',
@@ -919,13 +925,13 @@ export default [
     {
         id: 'marioyoshiisland',
         name: 'Super Mario World 2: Yoshi\'s Island',
-        "url": libHost + "/files/anyrom.html?t=snes&g=roms/yoshiisland.sfc",
+        "url": libHost + "/files/anyrom.html?t=snes&g=roms/yoshiisland.zip",
         image: "https://d29xot63vimef3.cloudfront.net/image/misc-games/6835-1.jpg"
     },
     {
         id: 'mariorpg',
         name: 'Super Mario RPG',
-        "url": libHost + "/files/anyrom.html?t=snes&g=roms/mariorpg.sfc",
+        "url": libHost + "/files/anyrom.html?t=snes&g=roms/mariorpg.zip",
         image: "https://assets-prd.ignimgs.com/2022/01/26/supermariorpg-sq-1643215850430.jpg?crop=1%3A1%2Csmart&format=jpg"
     },
     {
@@ -937,19 +943,19 @@ export default [
     {
         id: 'donkeykongcountry1',
         name: 'Donkey Kong Country',
-        "url": libHost + "/files/anyrom.html?t=snes&g=roms/dkc.sfc",
+        "url": libHost + "/files/anyrom.html?t=snes&g=roms/dkc.zip",
         image: "https://assets-prd.ignimgs.com/2025/02/15/dkcsnes-1739578170756.jpg?crop=1%3A1%2Csmart&format=jpg"
     },
     {
         id: 'donkeykongcountry2',
         name: 'Donkey Kong Country 2',
-        "url": libHost + "/files/anyrom.html?t=snes&g=roms/dkc2.sfc",
+        "url": libHost + "/files/anyrom.html?t=snes&g=roms/dkc2.zip",
         image: "https://assets-prd.ignimgs.com/2025/02/15/dkc2snes-1024-1739579018373.jpg?crop=1%3A1%2Csmart&format=jpg"
     },
     {
         id: 'earthbound',
         name: 'Earthbound',
-        "url": libHost + "/files/anyrom.html?t=snes&g=roms/earthbound.sfc",
+        "url": libHost + "/files/anyrom.html?t=snes&g=roms/earthbound.zip",
         image: "https://assets-prd.ignimgs.com/2021/12/10/earthbound-1639126130595.jpg?crop=1%3A1%2Csmart&format=jpg"
     },
     {
