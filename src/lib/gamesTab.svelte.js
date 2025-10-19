@@ -114,8 +114,11 @@ class GamesTab {
      */
     open(url, showButton) {
         if (this.window) return this.window;
+
+        // try to open a window
         this.window = window.open();
         if (!this.window) return;
+
         // fill out info
         const settings = stores.get(Settings);
         // generate title
@@ -126,7 +129,9 @@ class GamesTab {
         // create document
         this.window.document.head.innerHTML = `<title>${applicationSubtitle} - ${applicationName}</title>`
             + `<link rel="icon" href="${applicationIcon}">`;
-
+        this.window.document.body.style.margin = "0";
+        this.window.document.body.style.filter = `grayscale(${Math.min(settings.reflectionDisguiseIntensity, 0.5) * 2}) contrast(${0.5 + (0.5 - (Math.max(0.5, settings.reflectionDisguiseIntensity) - 0.5))})`;
+        // create iframe
         const makeIframe = () => {
             const iframe = this.window.document.createElement('iframe');
             iframe.style = "position:absolute;left:0;top:0;width:100%;height:100%;"
