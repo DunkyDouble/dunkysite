@@ -763,13 +763,13 @@ export default [
     {
         id: 'sigmaclicker',
         name: "SIGMA CLICKER",
-        url: 'https://studio.penguinmod.com/embed.html?fps=60&clones=Infinity&offscreen&size=640x360&autoplay&addons=vol-slider%2Cremove-curved-stage-border#6418228981',
+        url: 'https://studio.penguinmod.com/embed.html?fps=60&clones=Infinity&offscreen&size=640x360&autoplay&addons=vol-slider%2Cremove-curved-stage-border&project_url=https%3A%2F%2Fmcontent-physics1433-simulations-dd.vercel.app%2Fcontent%2Ffiles%2Fsigmaclicker%2Fregoon%2FSIGMACLICKERREGOONED.pmp',
         image: libHost + '/files/SIGMACLICKER.png',
     },
     {
         id: 'sigmaclicker2',
         name: "SIGMA CLICKER 2",
-        url: 'https://studio.penguinmod.com/embed.html?fps=60&clones=Infinity&offscreen&size=640x360&autoplay&addons=vol-slider%2Cremove-curved-stage-border#sigma2',
+        url: 'https://studio.penguinmod.com/embed.html?fps=60&clones=Infinity&offscreen&size=640x360&autoplay&addons=vol-slider%2Cremove-curved-stage-border&project_url=https%3A%2F%2Fmcontent-physics1433-simulations-dd.vercel.app%2Fcontent%2Ffiles%2Fsigmaclicker%2Fsigma2%2FSIGMACLICKER2.pmp',
         image: libHost + '/files/SIGMACLICKER2.png',
     },
     // {
