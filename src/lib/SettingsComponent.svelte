@@ -80,7 +80,8 @@
     </label></div>
     <span>Only shows a few games in the list when you first open the website, useful if your computer starts lagging immediately.</span>
 </div>
-<div class="setting setting-right">
+<!-- TODO: Right now my custom server is in a weird setup so i can only access it under HTTP, remove display:none when its ready -->
+<div class="setting setting-right" style="display:none">
     <div><label>
         Custom Server
 		<div>
