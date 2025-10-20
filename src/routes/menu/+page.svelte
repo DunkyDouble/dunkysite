@@ -3,10 +3,11 @@
     
 	import GamesComponent from '$lib/GamesComponent.svelte';
 	import BlogComponent from '$lib/BlogComponent.svelte';
+	import SettingsComponent from '$lib/SettingsComponent.svelte';
 
-	import GamesTab from '$lib/gamesTab.js';
-    import Settings from '$lib/settings.js';
-    import SiteState from '$lib/site-state.svelte.js';
+	import GamesTab from '$lib/gamesTab.svelte.js';
+    import SiteState from '$lib/state/site.svelte.js';
+    import Settings from '$lib/stores/settings.js';
 
 	import gamesList from '$lib/games.js';
 	import appsList from '$lib/apps.js';
@@ -14,7 +15,6 @@
 
 	const options = $state({
 		search: '',
-		secret: '',
 		newTab: true,
 		activeTab: 'home'
 	});
@@ -35,26 +35,6 @@
     };
 	const setActiveTab = (type) => {
 		options.activeTab = type;
-	};
-
-	const onSecretChanged = () => {
-		switch (options.secret) {
-			case 'anything': {
-				const gameTab = new GamesTab();
-				gameTab.open(`${window.origin}/secret`);
-				break;
-			}
-			case 'unittest': {
-				const gameTab = new GamesTab();
-				gameTab.open(`${window.origin}/secret/unittest`);
-				break;
-			}
-			case 'test': {
-				const gameTab = new GamesTab();
-				gameTab.open(`${window.origin}/secret/test`);
-				break;
-			}
-		}
 	};
 </script>
 
@@ -135,27 +115,7 @@
 			</p>
 			<GamesComponent search={options.search} apps={options.activeTab === 'apps'} newTab={options.newTab} />
 		{:else if options.activeTab === 'settings'}
-			<p class="setting">
-                <span><label>
-                    <input type="checkbox" bind:checked={$Settings.showAllGamesNeeded}>
-                    Hide too many games behind a button on startup
-                </label></span>
-                <span>Only shows a few games in the list when you first open the website, useful if your computer starts lagging immediately.</span>
-            </p>
-			<p class="setting">
-                <span><label>
-                    <input type="checkbox" bind:checked={$Settings.showDebugMenu}>
-                    Show Developer menus
-                </label></span>
-                <span>Adds small information to some menus and elements. Not useful for normal users.</span>
-            </p>
-            <a target="_blank" href="/terms">Terms of Service</a>
-            <a target="_blank" href="/privacy">Privacy Policy</a>
-            <p>
-                Thanks to 3kh0, gn-math, genizy, scheng123321, unxa, udbsite, 98corbins, burnedpopcorn, irv77, bubbls,
-                reunbozdo, Irusso, FreeSwfGames, unxw, irv77, GalacticNetwork for creating huge libraries of assets and game ports
-            </p>
-			<input class="secret-bar" type="text" placeholder="Coder Debug..." bind:value={options.secret} onchange={onSecretChanged} />
+            <SettingsComponent />
 		{:else if options.activeTab === 'blog'}
 			{#each blogPosts as blogPost}
 				<BlogComponent post={blogPost} />
@@ -248,7 +208,6 @@
 		margin-block: 0;
 	}
 
-	.secret-bar,
 	.search-bar,
     .unconfirmed input[type="text"] {
 		border: 1px solid white;
@@ -260,11 +219,6 @@
     .unconfirmed input[type="text"] {
         margin-bottom: 8px;
     }
-	.secret-bar {
-		position: absolute;
-		right: 4px;
-		bottom: 4px;
-	}
 
 	.page-tabs {
 		width: 75%;
@@ -296,31 +250,4 @@
 		height: 0;
 		outline: none;
 	}
-
-    .setting {
-        width: 60%;
-    }
-    .setting > span:nth-child(1) {
-        display: block;
-        height: 2em;
-    }
-    .setting > span:nth-child(1) label {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        font-weight: bold;
-        font-size: large;
-        
-        cursor: pointer;
-    }
-    .setting label input[type="checkbox"] {
-        width : 1.5em;
-        height: 1.5em;
-        margin-right: 8px;
-    }
-    .setting > span:nth-child(2) {
-        font-style: italic;
-        opacity: 0.75;
-    }
 </style>

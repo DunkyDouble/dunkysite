@@ -1,8 +1,8 @@
 <script>
-	import GamesTab from '$lib/gamesTab.js';
-    import Settings from '$lib/settings.js';
+	import GamesTab from '$lib/gamesTab.svelte.js';
     import Unavailable from '$lib/unavailable.js';
-    import SiteState from '$lib/site-state.svelte.js';
+    import SiteState from '$lib/state/site.svelte.js';
+    import Settings from '$lib/stores/settings.js';
 
 	import gamesList from '$lib/games.js';
 	import appsList from '$lib/apps.js';
@@ -26,16 +26,37 @@
         showAllGamesShow = (fullList.length > showAllGamesLength) && showAllGamesNeeded && !showAllGames;
     });
 
-	const openGame = (url) => {
-		if (url.startsWith('/')) {
-			url = String(`${window.origin}/${url}`);
+	const openGame = async (game) => {
+		// block if needs a setting
+		if (game.requiresExternalServer && !$Settings.externalServer) {
+			return await alert("This game requires the \"Custom Server\" setting."
+				+ " Please ask the provider for the Custom Server.");
 		}
+		// if they want more tabs, confirm that they have enabled popups or will have to
+		if ($Settings.openTabCount > 1 && !$Settings.openTabCountConfirmPopup) {
+			await alert("Google Chrome will block more than 1 tab by default."
+			+ " You may have to come back to this tab to enable pop-ups, then more tabs will appear.");
+			$Settings.openTabCountConfirmPopup = true;
+		}
+		
+		// open the first tab
+		const gameTab = new GamesTab(game.fromDunky ? "gamedunky" : "game");
+		const gameUrl = gameTab.makeUrl(game.url);
 		if (!props.newTab) {
-			window.location.href = url;
+			window.location.href = gameUrl;
 			return;
 		}
-		const gameTab = new GamesTab();
-		gameTab.open(url);
+		gameTab.open(gameUrl);
+
+		// if more tabs should open, open those extra tabs with a button
+		if ($Settings.openTabCount > 1) {
+			const extraTabCount = Math.max(1, $Settings.openTabCount - 1);
+			for (let i = 0; i < extraTabCount; i++) {
+				const gameTab = new GamesTab(game.fromDunky ? "gamedunky" : "game");
+				const gameUrl = gameTab.makeUrl(game.url);
+				gameTab.open(gameUrl, true);
+			}
+		}
 	};
 	const showGames = () => {
 		showAllGames = true;
@@ -58,7 +79,7 @@
 {/if}
 <div class="games-list">
 	{#each SiteState.shownGames as game}
-		<button class="game" onclick={() => openGame(game.url)} data-id={game.id}>
+		<button class="game" onclick={() => openGame(game)} data-id={game.id}>
 			<img class="game-icon" alt="GameIcon" src={game.image} draggable="false" loading="lazy" />
 			<p class="game-name">{game.name}</p>
 

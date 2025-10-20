@@ -6,12 +6,19 @@ const defaultSettings = {
     usernameSetup: false,
     showDebugMenu: false,
     showAllGamesNeeded: false,
+    openTabCount: 1,
+    openTabCountConfirmPopup: false,
+    reflectionDisguiseIntensity: 0,
+    externalServer: "",
 };
 
 const settings = writable(defaultSettings);
 localforage.getItem('dunky:settings').then((saved) => {
     if (saved) {
-        settings.set(saved);
+        settings.set({
+            ...defaultSettings,
+            ...saved,
+        });
     }
 });
 settings.subscribe((value) => {

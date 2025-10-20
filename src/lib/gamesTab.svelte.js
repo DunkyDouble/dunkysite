@@ -1,3 +1,7 @@
+import * as stores from 'svelte/store';
+
+import Settings from '$lib/stores/settings.js';
+
 const windowNames = {
     docs: 'Google Docs',
     slides: 'Google Slides',
@@ -67,21 +71,56 @@ const pickRandomArray = (array) => {
 };
 
 class GamesTab {
-    constructor(username) {
+    /**
+     * Makes a hidden tab using about:blank
+     * @param {"generic"|"menu"|"game"|"gamedunky"}} windowType 
+     */
+    constructor(windowType = "generic") {
         /**
          * @type {Window} The window of this tab if it exists.
          */
         this.window = null;
-        this.username = username;
+
+        /**
+         * @type {"generic"|"menu"|"game"|"gamedunky"}
+         */
+        this.windowType = windowType;
+    }
+    /**
+     * Makes or edits a URL based on the specified windowType
+     * @param {string?} url The target URL, if needed.
+     */
+    makeUrl(url) {
+        const settings = stores.get(Settings);
+        if ((this.windowType === "game" || this.windowType === "gamedunky") && url.startsWith('/')) {
+		    url = String(`${window.origin}/${url}`);
+        }
+        if (this.windowType === "menu") {
+            const menuUrl = new URL(window.origin);
+            menuUrl.pathname = `/menu`;
+            return menuUrl;
+        } else if (this.windowType === "gamedunky") {
+            const gameUrl = new URL(gameUrl);
+            gameUrl.searchParams.set("dunky-username", settings.username);
+            gameUrl.searchParams.set("dunky-server", settings.externalServer);
+            return gameUrl;
+        }
+        return url;
     }
     /**
      * Opens the games tab if it is not already open.
      * @param {string} url Will open a new tab with the URL, but with all of the tab hider data.
+     * @param {boolean?} showButton Shows a button to open the iframe.
      */
-    open(url) {
+    open(url, showButton) {
         if (this.window) return this.window;
+
+        // try to open a window
         this.window = window.open();
+        if (!this.window) return;
+
         // fill out info
+        const settings = stores.get(Settings);
         // generate title
         const application = pickRandomArray(Object.keys(windowNames));
         const applicationName = windowNames[application];
@@ -90,22 +129,38 @@ class GamesTab {
         // create document
         this.window.document.head.innerHTML = `<title>${applicationSubtitle} - ${applicationName}</title>`
             + `<link rel="icon" href="${applicationIcon}">`;
-        const iframe = this.window.document.createElement('iframe');
-        iframe.style.borderWidth = "0px";
-        iframe.style.position = "absolute";
-        iframe.style.left = "0px";
-        iframe.style.top = "0px";
-        iframe.style.width = "100%";
-        iframe.style.height = "100%";
-        if (!url) {
-            const menuUrl = new URL(window.origin);
-            menuUrl.pathname = `/menu`;
-            menuUrl.search = `?name=${this.username}`;
-            iframe.src = menuUrl;
-        } else {
+        this.window.document.body.style.margin = "0";
+        this.window.document.body.style.filter = `grayscale(${Math.min(settings.reflectionDisguiseIntensity, 0.5) * 2}) contrast(${0.5 + (0.5 - (Math.max(0.5, settings.reflectionDisguiseIntensity) - 0.5))})`;
+        // create iframe
+        const makeIframe = () => {
+            const iframe = this.window.document.createElement('iframe');
+            iframe.style = "position:absolute;left:0;top:0;width:100%;height:100%;"
+                + "border-width:0;";
             iframe.src = url;
+            this.window.document.body.appendChild(iframe);
+        };
+        if (!showButton) {
+            makeIframe();
+        } else {
+            const div = this.window.document.createElement("div");
+            div.style = "position:absolute;left:0;top:0;width:100%;height:100%;"
+                + "display:flex;flex-direction:column;align-items:center;justify-content:center;";
+            const button = this.window.document.createElement("button");
+            button.innerHTML = "Open";
+            button.style = "font-size:32px;padding:8px;";
+            this.window.document.body.appendChild(div);
+            div.appendChild(button);
+
+            let buttonClicked = false;
+            button.onclick = () => {
+                if (buttonClicked) return;
+                buttonClicked = true;
+                
+                button.remove();
+                div.remove();
+                makeIframe();
+            };
         }
-        this.window.document.body.appendChild(iframe);
         return this.window;
     }
     /**
