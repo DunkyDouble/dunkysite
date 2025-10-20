@@ -803,6 +803,12 @@ export default [
         "image": libHost + "/files/site-gnm/covers/216.png",
     },
     {
+        "id": "fivenightsatfbcc",
+        "name": "Five Nights at F. Bears",
+        "url": libHost + "/files/large/fivenightsatfbcc/index.html",
+        "image": libHost + "/files/fnafb.webp",
+    },
+    {
         id: 'subwaysurfers',
         name: 'Subway Surfers',
         "url": libHost + "/files/site-gnm/html/12.html",
