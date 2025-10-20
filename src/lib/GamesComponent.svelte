@@ -4,10 +4,12 @@
     import SiteState from '$lib/state/site.svelte.js';
     import Settings from '$lib/stores/settings.js';
 
+    import sortWebsites from '$lib/sort-websites.js';
+
 	import gamesList from '$lib/games.js';
 	import appsList from '$lib/apps.js';
-	const sortedGamesList = gamesList.sort((game, sgame) => game.name.localeCompare(sgame.name));
-	const sortedAppsList = appsList.sort((game, sgame) => game.name.localeCompare(sgame.name));
+	const sortedGamesList = sortWebsites(gamesList);
+	const sortedAppsList = sortWebsites(appsList);
 
     let props = $props();
 
@@ -20,7 +22,7 @@
             .filter(game => $Settings.showDebugMenu ? true :
                 !(Unavailable.deleted.includes((new URL(game.url)).hostname) || Unavailable.unavailable.includes((new URL(game.url)).hostname)));
         const searchedList = fullList
-            .filter(game => game.name.toLowerCase().replace(/\s/gim, '').includes(props.search.toLowerCase()));
+            .filter(game => game.name.toLowerCase().replace(/\s/gim, '').includes(props.search.toLowerCase().replace(/\s/gim, '')));
         SiteState.shownGames = searchedList
             .slice(0, (showAllGames || !showAllGamesNeeded) ? Infinity : showAllGamesLength);
         showAllGamesShow = (fullList.length > showAllGamesLength) && showAllGamesNeeded && !showAllGames;
@@ -35,7 +37,7 @@
 		// if they want more tabs, confirm that they have enabled popups or will have to
 		if ($Settings.openTabCount > 1 && !$Settings.openTabCountConfirmPopup) {
 			await alert("Google Chrome will block more than 1 tab by default."
-			+ " You may have to come back to this tab to enable pop-ups, then more tabs will appear.");
+			    + " You may have to come back to this tab to enable pop-ups, then more tabs will appear.");
 			$Settings.openTabCountConfirmPopup = true;
 		}
 		
@@ -80,6 +82,10 @@
 <div class="games-list">
 	{#each SiteState.shownGames as game}
 		<button class="game" onclick={() => openGame(game)} data-id={game.id}>
+            {#if game.new}
+                <div class="game-new">NEW!</div>
+            {/if}
+
 			<img class="game-icon" alt="GameIcon" src={game.image} draggable="false" loading="lazy" />
 			<p class="game-name">{game.name}</p>
 
@@ -154,6 +160,19 @@
 
         z-index: 2;
 	}
+    .game-new {
+        position: absolute;
+        left: 4px;
+        top: 4px;
+        padding: 4px 8px;
+
+        background: #008547;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+
+        z-index: 5;
+    }
     .game-debug-label {
         position: absolute;
         left: 4px;
