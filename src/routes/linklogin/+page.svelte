@@ -4,8 +4,9 @@
 	import GamesTab from '$lib/gamesTab.svelte.js';
 
 	let keyIsDown = false;
-	const openGameTab = () => {
+	const openGameTab = (event) => {
 		if (!keyIsDown) return;
+		event.preventDefault();
 		const tab = new GamesTab("menu");
 		const url = tab.makeUrl();
 		tab.open(url);
@@ -22,7 +23,7 @@
 </script>
 
 <main class="page">
-	<a href="#top" onclick={openGameTab}>Citing sources</a>
+	<a href="about:blank" target="_blank" onclick={openGameTab}>Citing sources</a>
 	<a href="https://historydaily.com/about" target="_blank">About</a>
 	<a href="https://historydaily.com/p/privacy-policy" target="_blank">Privacy Policy</a>
 </main>
@@ -40,6 +41,7 @@
 	}
 
 	a {
+		width: 25%;
 		margin-block: 1em;
 
 		font-size: 1rem;
