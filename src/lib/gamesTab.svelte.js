@@ -99,6 +99,8 @@ class GamesTab {
             const menuUrl = new URL(window.origin);
             menuUrl.pathname = `/menu`;
             return menuUrl;
+        } else if (this.windowType === "test1") {
+            return "https://example.com/";
         } else if (this.windowType === "gamedunky") {
             const gameUrl = new URL(gameUrl);
             gameUrl.searchParams.set("dunky-username", settings.username);
