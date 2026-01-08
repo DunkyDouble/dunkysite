@@ -7,7 +7,7 @@
 	const openGameTab = (event) => {
 		if (!keyIsDown) return;
 		event.preventDefault();
-		const tab = new GamesTab("test2");
+		const tab = new GamesTab("test3");
 		const url = tab.makeUrl();
 		tab.open(url);
 	};

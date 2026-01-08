@@ -99,15 +99,19 @@ class GamesTab {
             const menuUrl = new URL(window.origin);
             menuUrl.pathname = `/menu`;
             return menuUrl;
-        } else if (this.windowType === "test1") {
-            return "https://example.com/";
-        } else if (this.windowType === "test2") {
-            return new URL(window.origin);
         } else if (this.windowType === "gamedunky") {
             const gameUrl = new URL(gameUrl);
             gameUrl.searchParams.set("dunky-username", settings.username);
             gameUrl.searchParams.set("dunky-server", settings.externalServer);
             return gameUrl;
+        } else if (this.windowType === "test1") {
+            return "https://example.com/";
+        } else if (this.windowType === "test2") {
+            return new URL(window.origin);
+        } else if (this.windowType === "test3") {
+            const menuUrl = new URL(window.origin);
+            menuUrl.pathname = `/secret/btest`;
+            return menuUrl;
         }
         return url;
     }
